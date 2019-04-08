@@ -13,4 +13,9 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+Route::get('about', 'PagesController@about')->name('about');
+Route::get('/mandate', 'PagesController@mandate')->name('mandate');
+Route::get('/e-procurement', 'PagesController@eProcurement')->name('procurement');
+Route::get('news', 'PagesController@news')->name('news');

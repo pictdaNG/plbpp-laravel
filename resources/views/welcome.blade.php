@@ -4,7 +4,7 @@
   Home | Welcome to Plateau State Bureau of Public procurement
 @endsection
 
-@section('active')
+@section('home')
     uk-active
 @endsection
 

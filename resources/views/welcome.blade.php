@@ -57,7 +57,7 @@
                 STANDARD <br>
                 <span class="bold-green">BID DOCUMENTS</span>
               </h3>
-              <a href="#" class="theme-color">VIEW ALL</a>
+              <a href="{{ route('documents') }}" class="theme-color">VIEW ALL</a>
             </div>
             <div class="link-docs">
               <div class="card-with-image">
@@ -65,7 +65,7 @@
                   <h4 class="small-lh">
                       LAW OF<br><span class="smaller">PROCUREMENT</span>
                   </h4>
-                  <a href="#" class="p">READ MORE</a>
+                  <a href="./assets/docs/Plateau-BPP-13-Procurement-Regulations.pdf" class="p">READ MORE</a>
                 </div>
                 <img src="./assets/img/law.png" alt="">
               </div>
@@ -74,14 +74,14 @@
                   <h4 class="small-lh">
                       GUIDELINES OF<br><span class="smaller">PROCUREMENT</span>
                   </h4>
-                  <a href="#" class="p">READ MORE</a>
+                  <a href="./assets/docs/Plateau-BPP-14-Procurement-Procedures-Manual.pdf" class="p">READ MORE</a>
                 </div>
                 <img src="./assets/img/library.png" alt="">
               </div>
               <div class="stacks-of-cards">
-                <a href="#" class="self-top">Standard Bidding Document for the Procurement of Works</a>
-                <a href="#" class="self-center">Standard Request for Proposals for the Selection of Consulting Firm</a>
-                <a href="#" class="self-bottom">Standard Bidding Document for the procurement of goods</a>
+                <a href="./assets/docs/Plateau-BPP-4-Standard-Bidding-Document-Small-Works-July-2017.pdf" class="self-top">Standard Bidding Document for the Procurement of Works</a>
+                <a href="./assets/docs/Plateau-BPP-8-Standard-Request-for-proposal-Selection-of-Consultant-July-2017.pdf" class="self-center">Standard Request for Proposals for the Selection of Consulting Firm</a>
+                <a href="./assets/docs/Plateau-BPP-5-Standard-Evaluation-Form-for-Goods-and-Works-July-2017.pdf" class="self-bottom">Standard Bidding Document for the procurement of goods</a>
               </div>
             </div>
             </div>
@@ -113,7 +113,7 @@
                     </div>
                   </div>
                 </div>
-                <a href="#" class="btn">READ MORE</a>
+                <a href="{{ route('about') }}" class="btn">READ MORE</a>
               </div>
             </div>
             <div class="news-n-events mt:40px uk-child-width-1-3@m">
@@ -155,7 +155,7 @@
                     </div>
                 </div>
                 <div class="uk-width-1-1@s uk-flex  uk-flex-center mt:40px">
-                    <a href="#" class="btn">LOAD MORE</a>
+                    <a href="{{ route('news') }}" class="btn">LOAD MORE</a>
                 </div>
             </div>
         </div>

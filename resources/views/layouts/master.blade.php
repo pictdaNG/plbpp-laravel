@@ -64,15 +64,15 @@
         <div class="footer-nav">
             <h5 class="footer-title">CATEGORIES</h5>
             <ul class="uk-list uk-list-bullet">
-                <li>Download</li>
-                <li>Functions And Powers</li>
-                <li>PLPPA</li>
-                <li>Mandate</li>
-                <li>News and Event</li>
-                <li>Procurement Guidelines</li>
-                <li>Procurement Law</li>
-                <li>Standard Bid Documents</li>
-                <li>Tender</li>
+                <li><a href="{{ route('documents') }}">Download</a></li>
+                <!-- <li>Functions And Powers</li> -->
+                <!-- <li>PLPPA</li> -->
+                <li><a href="{{ route('mandate') }}">Mandate</a></li>
+                <li><a href="{{ route('news') }}">News and Event</a></li>
+                <li><a href="./assets/docs/Plateau-BPP-14-Procurement-Procedures-Manual.pdf">Procurement Guidelines</a></li>
+                <li><a href="./assets/docs/Plateau-BPP-13-Procurement-Regulations.pdf">Procurement Law</a></li>
+                <li><a href="{{ route('documents') }}">Standard Bid Documents</a></li>
+                <!-- <li>Tender</li> -->
             </ul>
         </div>
         <div class="footer-nav">
@@ -100,11 +100,14 @@
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
 
         <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            <li class="uk-active"><a href="{{ route('home') }}" >Home</a></li>
-            <li ><a href="{{ route('about') }}">About</a></li>
-            <li ><a href="{{ route('mandate') }}">Mandate</a></li>
-            <li ><a href="{{ route('procurement') }}">E-Procurement</a></li>
-            <li ><a href="{{ route('news') }}">News</a></li>
+            <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
+            <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
+            <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">E-Procurement</a></li>
+            <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
+            <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
+            <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
+            <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
         </ul>
 
     </div>

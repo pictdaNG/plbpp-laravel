@@ -19,3 +19,6 @@ Route::get('about', 'PagesController@about')->name('about');
 Route::get('/mandate', 'PagesController@mandate')->name('mandate');
 Route::get('/e-procurement', 'PagesController@eProcurement')->name('procurement');
 Route::get('news', 'PagesController@news')->name('news');
+Route::get('/documents', 'PagesController@documents')->name('documents');
+Route::get('/faq', 'PagesController@faq')->name('faq');
+Route::get('/organogram', 'PagesController@organogram')->name('organogram');

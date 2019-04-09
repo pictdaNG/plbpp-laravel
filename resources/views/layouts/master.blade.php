@@ -43,9 +43,9 @@
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
             <li class="@yield('procurement')"><a href="{{ route('procurement') }}">E-Procurement</a></li>
             <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
-            <!-- <li ><a href="./pbb.html">e-Procurement</a></li>-->
-            <!-- <li ><a href="#">Open Contracting</a></li>-->
-            <!-- <li ><a href="#">Media</a></li>-->
+            <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
+            <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
+            <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
             <!-- <li ><a href="#">More</a></li>-->
             <!-- <li ><a href="#">Contact</a></li>-->
           </ul>

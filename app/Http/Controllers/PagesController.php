@@ -25,4 +25,16 @@ class PagesController extends Controller
   public function eProcurement() {
     return view('procurement');
   }
+
+  public function documents() {
+    return view('documents');
+  }
+
+  public function faq() {
+    return view('faq');
+  }
+
+  public function organogram() {
+    return view('organogram');
+  }
 }

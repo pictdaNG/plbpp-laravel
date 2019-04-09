@@ -11,7 +11,7 @@
 @section('content')
         <div class="dContainer">
             <div class="info">
-                <h3 class="title">ABOUT <span class="theme-color uk-text-bold">PLPPA</span></h3>
+                <h3 class="title">ABOUT <span class="theme-color uk-text-bold">PLBPP</span></h3>
     
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                     <div class="uk-card-media-left media uk-cover-container">

@@ -65,7 +65,7 @@
             <h5 class="footer-title">CATEGORIES</h5>
             <ul class="uk-list uk-list-bullet">
                 <li><a href="{{ route('documents') }}">Download</a></li>
-                <!-- <li>Functions And Powers</li> -->
+                <li><a href="{{ route('mandate') }}">Functions And Powers</a></li>
                 <!-- <li>PLPPA</li> -->
                 <li><a href="{{ route('mandate') }}">Mandate</a></li>
                 <li><a href="{{ route('news') }}">News and Event</a></li>

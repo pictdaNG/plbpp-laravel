@@ -21,4 +21,4 @@ This project requires the following:
 - Run `php artisan key:generate`
 - Run `php artisan serve`
 
-Access the project at localhost:8000 or 127.0.0.1:8000
+Access the project at localhost:8000 or `127.0.0.1:8000`

@@ -16,7 +16,7 @@ This project requires the following:
 - Run `git clone https://github.com/pictdaNG/plbpp-laravel.git`
 - Run `cd plbpp-laravel`
 - Run `composer install`
-- Run `cp .env-example .env`
+- Run `cp .env.example .env`
 - Update the `.env` file with your DB config keys
 - Run `php artisan key:generate`
 - Run `php artisan serve`

@@ -15,7 +15,7 @@
     
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                     <div class="uk-card-media-left media uk-cover-container">
-                        <img src="../assets/img/lally.png" alt="" />
+                        <img src="{{ URL::asset('./assets/img/news/award-3.jpeg') }}" alt="" />
                     </div>
                     <div class="uk-flex uk-flex-middle">
                         <div class="uk-card-body">
@@ -25,19 +25,56 @@
                             
                             <p>This was made known recently by the national association of Nigerian Student,（NAN) award committee chairman Naanking Matthew Dafoum, during the award presentation ceremony of outstanding performance to the Director general bureau of public procurement Builder Peter Dogo at his office.</p>
                             
-                            <p>The award committee chairman mentioned that NANs have beam its search light in the realm of financial experts, astute public servants, erudite managers vis-avis reputable organisation and administrations in the country Specifically zone C whichcomprises of North east and North central stressing that in the provision of realtime data NANs has fine it neccessary to recognise the effect the Plateau state bureauof public procurement under the leadership of Builder Peter Dogo, which have achieved tremendous progress among which includes proficiency in effective public service delivery, expertise in financial prudence, capacity development, National intergration, economic progress and national reformation among others.</p>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
                     <div class="uk-flex-last@s media uk-card-media-right uk-cover-container">
-                        <img src="../assets/img/outing.png" alt="" />
+                        <img src="{{ URL::asset('./assets/img/news/award-2.jpeg') }}" alt="" />
                     </div>
+                    <div class="uk-flex uk-flex-middle">
+                        <div class="uk-card-body">
+                            <p>The award committee chairman mentioned that NANs have beam its search light in the realm of financial experts, astute public servants, erudite managers vis-avis reputable organisation and administrations in the country Specifically zone C whichcomprises of North east and North central stressing that in the provision of realtime data NANs has fine it neccessary to recognise the effect the Plateau state bureauof public procurement under the leadership of Builder Peter Dogo, which have achieved tremendous progress among which includes proficiency in effective public service delivery, expertise in financial prudence, capacity development, National intergration, economic progress and national reformation among others.</p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="uk-card uk-card-default uk-grid-collapse uk-margin" uk-grid>
                     <div class="uk-flex uk-flex-middle">
                         <div class="uk-card-body">
                             <p>Presenting the award leader of the group Micheal Oyewole, said NANS is proud to identify with the DG, He urge him not torelent in his effort in piloting the affairs of the Agency as much is still being expected to be done.</p>
 
                             <p>Responding the Director general bureau of public procurement Builder Peter Dogo, express deliht to NANS for recognising his effect by awarding him saying that the Bureau of public procurement is an agency of the state government establish about 2 years ago with the responsibility of checkmating corrupt practices within governance because according to him statistics has shown that almost 95 percent contract that are awarded in the country most of the funds goes for fictitious jobs which necessisated the creation of the Bereau for public precurement</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about" style="margin-bottom: 40px;">
+                    <div class="info">                    
+                        <div class="uk-child-width-1-2@s uk-child-width-1-4@m uk-grid-small" uk-grid>
+                            <div>
+                                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                                    <img src="{{ URL::asset('./assets/img/news/award-1.jpeg') }}" alt="" style="width: 500px; height: 160px;" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                                    <img src="{{ URL::asset('./assets/img/news/award-2.jpeg') }}" alt="" style="width: 500px; height: 160px;" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                                    <img src="{{ URL::asset('./assets/img/news/award-3.jpeg') }}" alt="" style="width: 500px; height: 160px;" />
+                                </div>
+                            </div>
+                            <div>
+                                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle">
+                                    <img src="{{ URL::asset('./assets/img/news/award-4.jpeg') }}" alt=""  style="width: 500px; height: 160px;"/>
+                                </div>
+                            </div>                            
                         </div>
                     </div>
                 </div>

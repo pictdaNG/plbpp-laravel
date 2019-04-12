@@ -15,9 +15,9 @@
     <nav id="topbar">
       <div class="nav-container">
         <ul>
-          <li><a href="https://web.facebook.com/Plateaubpp/"><img src="./assets/img/facebook.png" alt=""></a></li>
-          <li><a href="https://twitter.com/plateaubpp"><img src="./assets/img/twitter.png" alt=""></a></li>
-          <li><a href="#"><img src="./assets/img/instagram.png" alt=""></a></li>
+          <li><a href="https://web.facebook.com/Plateaubpp/"><img src="{{ URL::asset('./assets/img/facebook.png') }}" alt=""></a></li>
+          <li><a href="https://twitter.com/plateaubpp"><img src="{{ URL::asset('./assets/img/twitter.png') }}" alt=""></a></li>
+          <li><a href="#"><img src="{{ URL::asset('./assets/img/instagram.png') }}" alt=""></a></li>
         </ul>
         <div class="currentDate">
           <span><img src="{{ URL::asset('./assets/img/calender.png') }}" alt=""></span>
@@ -30,7 +30,7 @@
         <div class="main-container">
         <div class="uk-navbar-left">
           <a class="uk-navbar-item uk-logo uk-flex uk-light uk-flex-middle" href="{{ route('home') }}">
-            <img class="logo uk-margin-small-right" src="./assets/img/logo.png" alt="">
+            <img class="logo uk-margin-small-right" src="{{ URL::asset('./assets/img/logo.png') }}" alt="">
             <h4 class="uk-margin-remove">Plateau State Bureau of<br> Public procurement</h4>
           </a>
           <ul class="uk-navbar-nav">
@@ -41,12 +41,12 @@
             <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
             <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
-            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">E-Procurement</a></li>
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">eProcurement</a></li>
             <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
-            <!-- <li ><a href="#">More</a></li>-->
+            <li><a href="#">Portal</a></li>
             <!-- <li ><a href="#">Contact</a></li>-->
           </ul>
           <a class="uk-navbar-toggle" uk-navbar-toggle-icon  uk-toggle="target: #sidenav" href="#"></a>
@@ -59,7 +59,7 @@
     </section>
     <footer>
         <div class="footer-nav">
-            <img class="map" src="./assets/img/PLPPA.png" alt="">
+            <img class="map" src="{{ URL::asset('./assets/img/PLPPA.png') }}" alt="">
         </div>
         <div class="footer-nav">
             <h5 class="footer-title">CATEGORIES</h5>
@@ -69,8 +69,8 @@
                 <!-- <li>PLPPA</li> -->
                 <li><a href="{{ route('mandate') }}">Mandate</a></li>
                 <li><a href="{{ route('news') }}">News and Event</a></li>
-                <li><a href="./assets/docs/Plateau-BPP-14-Procurement-Procedures-Manual.pdf">Procurement Guidelines</a></li>
-                <li><a href="./assets/docs/Plateau-BPP-13-Procurement-Regulations.pdf">Procurement Law</a></li>
+                <li><a href="{{ URL::asset('./assets/docs/Plateau-BPP-14-Procurement-Procedures-Manual.pdf') }}">Procurement Guidelines</a></li>
+                <li><a href="{{ URL::asset('./assets/docs/Plateau-BPP-13-Procurement-Regulations.pdf') }}">Procurement Law</a></li>
                 <li><a href="{{ route('documents') }}">Standard Bid Documents</a></li>
                 <!-- <li>Tender</li> -->
             </ul>
@@ -79,16 +79,16 @@
             <h5 class="footer-title">LATEST NEWS</h5>
             <div class="uk-flex img-links">
                 <a href="#" class="img-link">
-                    <img src="./assets/img/img-1.jpg" alt="">
+                    <img src="{{ URL::asset('./assets/img/img-1.jpg') }}" alt="">
                 </a>
                 <a href="#" class="img-link">
-                    <img src="./assets/img/img-3.jpg" alt="">
+                    <img src="{{ URL::asset('./assets/img/img-3.jpg') }}" alt="">
                 </a>
                 <a href="#" class="img-link">
-                    <img src="./assets/img/event-2.png" alt="">
+                    <img src="{{ URL::asset('./assets/img/event-2.png') }}" alt="">
                 </a>
                 <a href="#" class="img-link">
-                    <img src="./assets/img/event-1.png" alt="">
+                    <img src="{{ URL::asset('./assets/img/event-1.png') }}" alt="">
                 </a>
             </div>
         </div>
@@ -108,6 +108,7 @@
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
+            <li class="@yield('portal')"><a href="#">Portal</a></li>
         </ul>
 
     </div>

@@ -31,7 +31,7 @@
         <div class="uk-navbar-left">
           <a class="uk-navbar-item uk-logo uk-flex uk-light uk-flex-middle" href="{{ route('home') }}">
             <img class="logo uk-margin-small-right" src="{{ URL::asset('./assets/img/logo.png') }}" alt="">
-            <h4 class="uk-margin-remove">Plateau State Bureau of<br> Public procurement</h4>
+            <h4 class="uk-margin-remove">Plateau State Bureau of<br>Public Procurement</h4>
           </a>
           <ul class="uk-navbar-nav">
           </ul>

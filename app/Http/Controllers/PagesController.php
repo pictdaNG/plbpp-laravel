@@ -37,4 +37,8 @@ class PagesController extends Controller
   public function organogram() {
     return view('organogram');
   }
+
+  public function award() {
+    return view('newsEvents.award');
+  }
 }

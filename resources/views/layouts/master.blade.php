@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="{{ URL::asset('/assets/css/app.css') }}" rel="stylesheet">
   </head>
 <body>
 
@@ -20,7 +20,7 @@
           <li><a href="#"><img src="./assets/img/instagram.png" alt=""></a></li>
         </ul>
         <div class="currentDate">
-          <span><img src="./assets/img/calender.png" alt=""></span>
+          <span><img src="{{ URL::asset('./assets/img/calender.png') }}" alt=""></span>
           <span class="date"></span>
         </div>
       </div>
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="subfooter">
-            <span>Copyright &copy; All right reserved. | Designed by PLPPA IT Department </span>
+            <span>Copyright &copy; All right reserved. | Developed by PLBPP IT Department </span>
         </div>
     </footer>  </div>
 <div id="sidenav" uk-offcanvas="overlay: true">
@@ -112,6 +112,6 @@
 
     </div>
 </div>
-<script src="assets/js/app.js"></script>
+<script src="{{ URL::asset('/assets/js/app.js') }}"></script>
 </body>
 </html>

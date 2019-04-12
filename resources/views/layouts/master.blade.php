@@ -47,7 +47,7 @@
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
             <li><a href="#">Portal</a></li>
-            <!-- <li ><a href="#">Contact</a></li>-->
+            <li ><a href="#">Contact</a></li>
           </ul>
           <a class="uk-navbar-toggle" uk-navbar-toggle-icon  uk-toggle="target: #sidenav" href="#"></a>
         </div>

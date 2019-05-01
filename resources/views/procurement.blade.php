@@ -8,6 +8,24 @@
     uk-active
 @endsection
 
+@section('styles')
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.uikit.min.css">
+@endsection
+
+
+@section('scripts')
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+@endsection
+
 @section('content')
     <section class="body container-fluid">
         <div class="row">
@@ -207,85 +225,32 @@
                     </div>
                 </div>
                 <div class="uk-overflow-auto">
-                    <table class="uk-table uk-table-striped">
+                    <table id="example" class="uk-table uk-table-hover uk-table-striped" style="width:100%">
                         <thead class="el-tableHead">
                         <tr>
                             <th>Title</th>
                             <th>Contract Amount</th>
-                            <th>Contractor</th>
-                            <th>LGA</th>
+                            <th>Contractor</th>                            
                             <th>Approval Year</th>
                             <th>Procurring Entity</th>
+                            <th>LGA</th>
                         </tr>
                         </thead>
                         <tbody>
+
+                        @foreach($procurements as $pro)
                         <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
+                            <td>{{ $pro->project_title }}</td>
+                            <td>{{ $pro->contract_sum }}</td>
+                            <td>{{ $pro->contractor }}</td>
+                            <td>{{ $pro->date_of_award }}</td>
+                            <td>{{ $pro->procuring_entity }}</td>
+                            <td>{{ $pro->lga }}</td>
                         </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                        </tr>
-                        <tr>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                            <td>Table Data</td>
-                        </tr>
+                        @endforeach
+                        
                         </tbody>
                     </table>
-                    <ul
-                            class="uk-pagination uk-flex-right uk-margin-medium-top"
-                            uk-margin
-                    >
-                        <li>
-                            <a href="#"><span uk-pagination-previous></span></a>
-                        </li>
-                        <li><a href="#">1</a></li>
-                        <li class="uk-disabled"><span>...</span></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li class="uk-active"><span>7</span></li>
-                        <li><a href="#">8</a></li>
-                        <li>
-                            <a href="#"><span uk-pagination-next></span></a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="row">
                     <div class="col">

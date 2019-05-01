@@ -134,7 +134,7 @@
                             <p>The Plateau State Public Sector Governance Reforms and Development Project in conjunction with Plateau State Bureau of Public Procurement organized training workshop for Procurement Officers and Accounting Officers of Ministries, Departments and Agencies of Government in September 2017.</p>
                         </div>
                         <div class="uk-card-footer">
-                            <span class="uk-text-danger"><span uk-icon="icon: user"></span>ADMIN</span>
+                            <!-- <span class="uk-text-danger"><span uk-icon="icon: user"></span>ADMIN</span> -->
                             <span class="uk-text-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
@@ -174,7 +174,7 @@
                             <p>Director general Plateau  State bureau of public procurement, has been described as an incentive figure in the Nigerian economic and health project of Plateau state Nigeria.</p>
                         </div>
                         <div class="uk-card-footer">
-                            <span class="uk-text-danger"><span uk-icon="icon: user"></span>ADMIN</span>
+                            <!-- <span class="uk-text-danger"><span uk-icon="icon: user"></span>ADMIN</span> -->
                             <span class="uk-text-danger">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"

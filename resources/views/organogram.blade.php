@@ -18,7 +18,7 @@
       </h3>
     </div>
     <div class="uk-flex uk-flex-center">
-      <img class="organogram" src="./assets/img/BPP-ORGANOGRAM-(CURRENT).png" alt="">
+      <img class="organogram" src="./assets/img/organogram.png" alt="">
     </div>
   </div>
 @endsection

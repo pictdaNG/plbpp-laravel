@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('about', 'PagesController@about')->name('about');
+Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/mandate', 'PagesController@mandate')->name('mandate');
 // Route::get('/e-procurement', 'PagesController@eProcurement')->name('procurement');
 Route::get('/e-procurement', 'ProcurementController@index')->name('procurement');
@@ -28,5 +28,8 @@ Route::get('/organogram', 'PagesController@organogram')->name('organogram');
 
 Route::get('/admin', 'ProcurementController@create')->name('upload');
 Route::post('/admin', 'ProcurementController@uploadFile')->name('import');
+
+Route::get('/contact', 'PagesController@contact')->name('contact');
+
 
 

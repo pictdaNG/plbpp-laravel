@@ -47,8 +47,7 @@
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
-            <li><a href="#">Portal</a></li>
-            <!-- <li ><a href="#">Contact</a></li> -->
+            <!-- <li class="@yield('contact')"><a href="{{ route('contact') }}">Contact</a></li> -->
           </ul>
           <a class="uk-navbar-toggle" uk-navbar-toggle-icon  uk-toggle="target: #sidenav" href="#"></a>
         </div>
@@ -60,7 +59,7 @@
     </section>
     <footer>
         <div class="footer-nav">
-            <img class="map" src="{{ URL::asset('./assets/img/PLPPA.png') }}" alt="">
+            <img class="map" src="{{ URL::asset('./assets/img/PLBPP.png') }}" alt="">
         </div>
         <div class="footer-nav">
             <h5 class="footer-title">CATEGORIES</h5>
@@ -77,26 +76,32 @@
             </ul>
         </div>
         <div class="footer-nav">
-            <h5 class="footer-title">LATEST NEWS</h5>
-            <div class="uk-flex img-links">
-                <a href="#" class="img-link">
-                    <img src="{{ URL::asset('./assets/img/img-1.jpg') }}" alt="">
-                </a>
-                <a href="#" class="img-link">
-                    <img src="{{ URL::asset('./assets/img/img-3.jpg') }}" alt="">
-                </a>
-                <a href="#" class="img-link">
-                    <img src="{{ URL::asset('./assets/img/event-2.png') }}" alt="">
-                </a>
-                <a href="#" class="img-link">
-                    <img src="{{ URL::asset('./assets/img/event-1.png') }}" alt="">
-                </a>
+            <h5 class="footer-title uk-text-center">CONTACT US</h5>
+            <div class="uk-child-width-1-2@m" uk-grid>
+                <div class="uk-margin-remove">
+                    SOCIAL MEDIA
+                    <p class="uk-margin-small-top">Twitter: @plateaubpp </p>
+                    <p class="uk-margin-small-top">Facebook: @plateaubpp </p>
+                    <p class="uk-margin-small-top">Instagram: @plateaustatebpp</p>
+                </div>
+                <div class="uk-margin-remove">
+                    ADDRESS:
+                    <p class="uk-margin-small-top"> bereau of public procurement,  plateau state. No. 4 Miskom Buenyen st. Rayfield Jos</p>
+                    PHONE:
+                    <p class="uk-margin-small-top">
+                        08033672724
+                    </p>
+                    <p class="uk-margin-small-top">
+                        070377055115
+                    </p>
+                </div>
             </div>
         </div>
         <div class="subfooter">
             <span>Copyright &copy; All right reserved. | Developed by PLBPP IT Department </span>
         </div>
-    </footer>  </div>
+    </footer>
+</div>
 <div id="sidenav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar uk-flex uk-flex-column">
 
@@ -109,7 +114,7 @@
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
-            <li class="@yield('portal')"><a href="#">Portal</a></li>
+            <!-- <li class="@yield('contact')"><a href="{{ route('contact') }}">Contact</a></li> -->
         </ul>
 
     </div>

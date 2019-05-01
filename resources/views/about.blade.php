@@ -37,7 +37,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <a href="#" class="btn">READ MORE</a> -->
             </div>
         </div>
 @endsection

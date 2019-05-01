@@ -41,4 +41,9 @@ class PagesController extends Controller
   public function award() {
     return view('newsEvents.award');
   }
+
+  public function contact() {
+    return view('contact');
+  }
+
 }

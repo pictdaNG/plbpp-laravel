@@ -10,6 +10,16 @@
 
 @section('styles')
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.uikit.min.css">
+    <style type="text/css">
+        .portal-btn {
+            color: #ffffff;
+        }
+
+        .portal-btn:hover {
+            color: #306c49;
+            background-color: #ffffff;
+        }
+    </style>
 @endsection
 
 
@@ -36,6 +46,7 @@
                             <div class="el-leftHolder">
                                 <img src="./assets/img/platStet.png" alt="" />
                                 <h3>Plateau State Open Contracting Portal</h3>
+                                <a href="https://www.eprocurement.plateaustate.gov.ng" target="_blank" class="uk-button uk-button-default uk-button-small portal-btn" style="margin-right: 30px;">Portal</a>
                             </div>
                         </div>
                     </div>
@@ -60,7 +71,7 @@
                                             TOTAL NUMBER OF PROJECTS
                                         </p>
                                         <p class="el-cardFigure">
-                                            1024
+                                            {{ count($procurements) }}
                                         </p>
                                     </div>
                                 </div>
@@ -78,6 +89,7 @@
                                         </p>
                                         <p class="el-cardFigure">
                                             ₦ 45,091,199,582
+
                                         </p>
                                     </div>
                                 </div>
@@ -95,6 +107,7 @@
                                         </p>
                                         <p class="el-cardFigure">
                                             ₦ 2,283,102,632
+                                            
                                         </p>
                                     </div>
                                 </div>
@@ -123,95 +136,22 @@
         </div>
     </section>
     <section class="container-fluid body ">
-        <div class="row el-paddingTop30">
+        <div class="row el-paddingTop30" uk-filter="target: .js-filter">
             <div class="col-md-12 col-lg-3 ">
                 <div class="row">
                     <div class="col">
                         <h3>FILTER PROJECTS</h3>
                         <div class="uk-margin uk-card uk-card-body uk-card-default">
-                            <label class="uk-form-label" for="form-stacked-select"
-                            ><h5>FILTER BY SECTOR</h5></label
-                            >
-                            <div class="uk-form-controls">
-                                <select class="uk-select" id="form-stacked-select">
-                                    <option value="Health">Health</option
-                                    ><option value="Construction">Construction</option
-                                ><option value="Education">Education</option
-                                ><option value="Finance">Finance</option
-                                ><option value="Social Development"
-                                >Social Development</option
-                                ><option value="Telecommunications"
-                                >Telecommunications</option
-                                ><option value="Agriculture">Agriculture</option
-                                ><option value="Environment">Environment</option
-                                ><option value="Justice">Justice</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="uk-margin uk-card uk-card-body uk-card-default">
-                            <label class="uk-form-label" for="form-stacked-select"
-                            ><h5>FILTER BY YEAR</h5></label
-                            >
-                            <div class="uk-form-controls">
-                                <div>
-                                    <label
-                                    ><input class="uk-checkbox" type="checkbox" checked />
-                                        2019</label
-                                    >
-                                </div>
-                                <div>
-                                    <label
-                                    ><input class="uk-checkbox" type="checkbox" />
-                                        2018</label
-                                    >
-                                </div>
-                                <div>
-                                    <label
-                                    ><input class="uk-checkbox" type="checkbox" />
-                                        2017</label
-                                    >
-                                </div>
-                                <div>
-                                    <label
-                                    ><input class="uk-checkbox" type="checkbox" />
-                                        2016</label
-                                    >
-                                </div>
-                            </div>
-                        </div>
-                        <div class="uk-margin uk-card uk-card-body uk-card-default">
-                            <label class="uk-form-label" for="form-stacked-select"
-                            ><h5>
-                                FILTER BY MINISTRIES, DEPARTMENTS &amp; AGENCIES
-                            </h5></label
-                            >
-                            <div class="uk-form-controls">
-                                <select class="uk-select" id="form-stacked-select">
-                                    <option value="9">College Of Education</option>
-                                    <option value="12">Ministry of Agriculture</option
-                                    ><option value="7">Ministry of Education</option
-                                ><option value="13"
-                                >Ministry of Environment and Natural Resources</option
-                                ><option value="4">Ministry of Finance</option
-                                ><option value="1"
-                                >Ministry of Health & Human Services</option
-                                ><option value="15"
-                                >Ministry of Information and Home Affairs</option
-                                ><option value="19">Ministry of Justice</option
-                                ><option value="11"
-                                >Ministry of Science and Technology</option
-                                ><option value="16">Ministry of Water Resources</option
-                                ><option value="6">Ministry of Women Affairs</option
-                                ><option value="2"
-                                >Ministry of Works Housing and Transport</option
-                                ><option value="8">Ministry of Youth and Sport</option
-                                ><option value="5">Ministry of Youth And Sports</option
-                                ><option value="20">Planning and Budget Commission</option
-                                ><option value="21"
-                                >Secretary to the State Government</option
-                                ><option value="3"
-                                >State Universal Basic Education</option
-                                >
+                            <label class="uk-form-label">
+                                <h5>FILTER BY MINISTRIES, DEPARTMENTS &amp; AGENCIES</h5>
+                            </label>
+                            <div class="uk-form-controls" uk-filter="target: .js-filter">
+                                <select class="uk-select">
+                                    @foreach($procurements as $pro)                                        
+                                        <option uk-filter-control="[data-tags*='{{ $pro->procuring_entity }}']">
+                                            {{ $pro->procuring_entity }}
+                                        </option>
+                                    @endforeach                                    
                                 </select>
                             </div>
                         </div>
@@ -224,31 +164,29 @@
                         <h3>PROJECTS</h3>
                     </div>
                 </div>
-                <div class="uk-overflow-auto">
-                    <table id="example" class="uk-table uk-table-hover uk-table-striped" style="width:100%">
+                <div class="uk-overflow-auto" >
+                    <table id="example" class="uk-table uk-table-hover uk-table-striped js-filter" style="width:100%">
                         <thead class="el-tableHead">
-                        <tr>
-                            <th>Title</th>
-                            <th>Contract Amount</th>
-                            <th>Contractor</th>                            
-                            <th>Approval Year</th>
-                            <th>Procurring Entity</th>
-                            <th>LGA</th>
-                        </tr>
+                            <tr>
+                                <th>Title</th>
+                                <th>Contract Amount</th>
+                                <th>Contractor</th>                            
+                                <th>Approval Year</th>
+                                <th>Procurring Entity</th>
+                                <th>LGA</th>
+                            </tr>
                         </thead>
-                        <tbody>
-
-                        @foreach($procurements as $pro)
-                        <tr>
-                            <td>{{ $pro->project_title }}</td>
-                            <td>{{ $pro->contract_sum }}</td>
-                            <td>{{ $pro->contractor }}</td>
-                            <td>{{ $pro->date_of_award }}</td>
-                            <td>{{ $pro->procuring_entity }}</td>
-                            <td>{{ $pro->lga }}</td>
-                        </tr>
-                        @endforeach
-                        
+                        <tbody class="">
+                            @foreach($procurements as $pro)
+                                <tr data-tags="{{ $pro->procuring_entity }}">
+                                    <td>{{ $pro->project_title }}</td>
+                                    <td>{{ $pro->contract_sum }}</td>
+                                    <td>{{ $pro->contractor }}</td>
+                                    <td>{{ $pro->date_of_award }}</td>
+                                    <td>{{ $pro->procuring_entity }}</td>
+                                    <td>{{ $pro->lga }}</td>
+                                </tr>
+                            @endforeach                        
                         </tbody>
                     </table>
                 </div>

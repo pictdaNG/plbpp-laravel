@@ -41,12 +41,11 @@
                     <li>
                         <a href="#" class="p">Training workshop for Procurement Officers</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#" class="p">Are We alright Folks</a>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="#" class="p">Breaking news, A Javascript bug killed a browser because a developer told it to console the bug
-                            infinitely.</a>
+                        <a href="#" class="p">Plateau State Bereau of Public Procurement Receives award for outstanding performance</a>
                     </li>
                 </ul>
             

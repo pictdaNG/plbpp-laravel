@@ -114,8 +114,15 @@
 		  public function index() {
 		  	$procurements = Procurement::all();
 
-		  	// dd($procurement);
-    		return view('procurement')->with('procurements', $procurements);
+		  	// foreach ($procurements as $key => $value) {
+		  	// 	# code...
+		  	// 	$sum = $value->contract_sum;
+		  	// }  
+
+		  	// $total = sum($sum);
+		  	// dd($total);
+		  	// dd($procurements);
+    		return view('procurement')->with('procurements', $procurements)->with('data', $procurements);
 		  }
 	    
 	}

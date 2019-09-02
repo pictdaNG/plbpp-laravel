@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Repositories\Ocds\OcdsContract;
 
-class PagesController extends Controller
-{
+class PagesController extends Controller {
+
+  protected $ocdsRepo;
+
+  public function __construct(OcdsContract $ocdsContract) {
+    $this->ocdsRepo = $ocdsContract;
+  }
+
   public function home() {
     return view('welcome');
   }
@@ -23,6 +30,8 @@ class PagesController extends Controller
   }
 
   public function eProcurement() {
+    $ocds = $this->ocdsRepo->findAll();
+    dd($ocds);
     return view('procurement');
   }
 

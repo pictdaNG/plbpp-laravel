@@ -174,10 +174,16 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+ 		App\Providers\AdminServiceProvider::class,
+		App\Providers\LoginServiceProvider::class,
+		App\Providers\RegistrationServiceProvider::class,
+		App\Providers\OcdsServiceProvider::class,
+		App\Providers\OcdsYearServiceProvider::class,
  		App\Providers\ProcurementServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Davmixcool\MetaManager\MetaServiceProvider::class,
-
+        Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
     ],
 
     /*
@@ -229,7 +235,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
-
+        'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
+        'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
+        'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
     ],
 
 ];

@@ -4,19 +4,22 @@
 
 	use Illuminate\Http\Request;
 	use App\Repositories\Procurement\ProcurementContract;
+	use App\Repositories\Ocds\OcdsContract;
 	use App\Procurement;
 	use App\Imports\ProcurementImport;
 	use Maatwebsite\Excel\Facades\Excel;
 	use Session;
-
+	use Sentinel;
 
 	class ProcurementController extends Controller
 	{
 
 			protected $repo;
+			protected $ocdsRepo;
 
-			public function __construct(ProcurementContract $procurementContract) {
+			public function __construct(ProcurementContract $procurementContract, OcdsContract $ocdsContract) {
 				$this->repo = $procurementContract;
+				$this->ocdsRepo = $ocdsContract;
 			}
 
 	    /**
@@ -25,7 +28,11 @@
 	     * @return \Illuminate\Http\Response
 	     */
 	    public function create() {
-	      return view('procurement.create');
+	    	if(!Sentinel::check()){
+					return redirect()->route('auth.login.get');
+				}else{
+	      	return view('procurement.create');
+	      }
 	    }
 
 	    public function uploadFile(Request $request){
@@ -112,17 +119,24 @@
 		  }
 
 		  public function index() {
-		  	$procurements = Procurement::all();
+		  	if(!Sentinel::check()){
+					return redirect()->route('auth.login.get');
+				}
+				else{
+			  	$procurements = Procurement::all();
+			  	$ocds_records = $this->ocdsRepo->findAll();
+    			// dd($ocds);
 
-		  	// foreach ($procurements as $key => $value) {
-		  	// 	# code...
-		  	// 	$sum = $value->contract_sum;
-		  	// }  
+			  	// foreach ($procurements as $key => $value) {
+			  	// 	# code...
+			  	// 	$sum = $value->contract_sum;
+			  	// }  
 
-		  	// $total = sum($sum);
-		  	// dd($total);
-		  	// dd($procurements);
-    		return view('procurement')->with('procurements', $procurements)->with('data', $procurements);
+			  	// $total = sum($sum);
+			  	// dd($total);
+			  	// dd($procurements);
+    			return view('procurement')->with('procurements', $procurements)->with('data', $procurements)->with('ocds_records', $ocds_records);
+    		}
 		  }
 	    
 	}

@@ -47,7 +47,7 @@
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
-            <!-- <li class="@yield('contact')"><a href="{{ route('contact') }}">Contact</a></li> -->
+            <li class="@yield('contact')"><a href="http://15.188.63.156/login" target="_blank">Portal</a></li>
           </ul>
           <a class="uk-navbar-toggle" uk-navbar-toggle-icon  uk-toggle="target: #sidenav" href="#"></a>
         </div>
@@ -62,7 +62,7 @@
             <img class="map" src="{{ URL::asset('./assets/img/PLBPP.png') }}" alt="">
         </div>
         <div class="footer-nav">
-            <h5 class="footer-title">CATEGORIES</h5>
+            <h5 class="footer-title">LINKS</h5>
             <ul class="uk-list uk-list-bullet">
                 <li><a href="{{ route('documents') }}">Download</a></li>
                 <li><a href="{{ route('mandate') }}">Functions And Powers</a></li>
@@ -72,7 +72,7 @@
                 <li><a href="{{ URL::asset('./assets/docs/Plateau-BPP-14-Procurement-Procedures-Manual.pdf') }}">Procurement Guidelines</a></li>
                 <li><a href="{{ URL::asset('./assets/docs/Plateau-BPP-13-Procurement-Regulations.pdf') }}">Procurement Law</a></li>
                 <li><a href="{{ route('documents') }}">Standard Bid Documents</a></li>
-                <!-- <li>Tender</li> -->
+                <li class="@yield('contact')"><a href="http://15.188.63.156/login" target="_blank">Portal</a></li>
             </ul>
         </div>
         <div class="footer-nav">

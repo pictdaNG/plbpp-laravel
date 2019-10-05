@@ -42,10 +42,10 @@
             <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
             <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
-            {{-- <li class="@yield('procurement')"><a href="{{ route('procurement') }}">e-Procurement</a></li> --}}
-            <li class="@yield('procurement')">
-                <a href="http://15.188.63.156/login">e-Procurement</a>
-            </li>
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">e-Procurement</a></li>
+            {{-- <li class="@yield('procurement')"> --}}
+                {{-- <a href="http://15.188.63.156/login">e-Procurement</a> --}}
+            {{-- </li> --}}
             <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
@@ -112,8 +112,8 @@
             <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
             <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
-            <li class="@yield('procurement')"><a href="http://15.188.63.156/login">E-Procurement</a></li>
-            {{-- <li class="@yield('procurement')"><a href="{{ route('procurement') }}">E-Procurement</a></li> --}}
+            {{-- <li class="@yield('procurement')"><a href="http://15.188.63.156/login">E-Procurement</a></li> --}}
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">E-Procurement</a></li>
             <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>

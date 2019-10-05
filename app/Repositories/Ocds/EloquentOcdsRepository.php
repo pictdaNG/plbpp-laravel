@@ -88,7 +88,7 @@ class EloquentOcdsRepository implements OcdsContract
 
     $str = strtolower($request->project);
     $ocds->slug = preg_replace('/\s+/', '-', $str);
-    dd($ocds);
+    // dd($ocds);
     $ocds->save();
     return $ocds;
   }

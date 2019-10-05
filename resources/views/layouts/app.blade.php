@@ -201,9 +201,9 @@
             START - Top Menu Controls
             -------------------->
             <div class="top-menu-controls">
-              <div class="element-search autosuggest-search-activator">
+              {{-- <div class="element-search autosuggest-search-activator">
                 <input placeholder="Start typing to search..." type="text">
-              </div>
+              </div> --}}
               <!--------------------
               START - User avatar and menu in secondary top menu
               -------------------->
@@ -274,23 +274,19 @@
           <div class="content-panel-toggler">
             <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
           </div>
-          <div class="content-i">
-            <div class="content-box">
-              <div class="row">
-                <div class="col-sm-12">
+          {{-- <div class="content-i"> --}}
+            {{-- <div class="content-box" style="padding: 0 !important"> --}}
+              {{-- <div class="row"> --}}
+                {{-- <div class="col-sm-12"> --}}
                   @yield('content')
-                </div>
-              </div>
+                {{-- </div> --}}
+              {{-- </div> --}}
               
-            </div>
-           
-            <!--------------------
-            END - Sidebar
-            -------------------->
-          </div>
+            {{-- </div> --}}
+          {{-- </div> --}}
         </div>
       </div>
-      <div class="display-type"></div>
+      {{-- <div class="display-type"></div> --}}
     </div>
     <script src="{{ URL::asset('./assets/admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/popper.js/dist/umd/popper.min.js') }}"></script>
@@ -328,22 +324,22 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script>
       @if(Session::has('message'))
-          var type = "{{ Session::get('alert-type', 'info') }}";
-          switch(type){
-            case 'info':
-              toastr.info("{{ Session::get('message') }}");
-              break;
+        var type = "{{ Session::get('alert-type', 'info') }}";
+        switch(type){
+          case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
 
-            case 'warning':
-              toastr.warning("{{ Session::get('message') }}");
-              break;
-            case 'success':
-              toastr.success("{{ Session::get('message') }}");
-              break;
-            case 'error':
-              toastr.error("{{ Session::get('message')}}");
-              break;
-          }
+          case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+          case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+          case 'error':
+            toastr.error("{{ Session::get('message')}}");
+            break;
+        }
       @endif
     </script>
     

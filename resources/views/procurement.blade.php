@@ -46,7 +46,7 @@
 							<div class="el-leftHolder">
 								<img src="./assets/img/platStet.png" alt="" />
 								<h3>Plateau State Open Contracting Portal</h3>
-								<a href="https://www.eprocurement.plateaustate.gov.ng" target="_blank" class="uk-button uk-button-default uk-button-small portal-btn" style="margin-right: 30px;">Portal</a>
+								<a href="http://15.188.63.156/login" target="_blank" class="uk-button uk-button-default uk-button-small portal-btn" style="margin-right: 30px;">Portal</a>
 							</div>
 						</div>
 					</div>
@@ -89,7 +89,6 @@
 										</p>
 										<p class="el-cardFigure">
 											₦ 45,091,199,582
-
 										</p>
 									</div>
 								</div>
@@ -106,7 +105,7 @@
 											HIGHEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ 2,283,102,632											
+											₦ 2,283,102,632
 										</p>
 									</div>
 								</div>

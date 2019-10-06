@@ -83,9 +83,21 @@
             <div class="uk-child-width-1-2@m" uk-grid>
                 <div class="uk-margin-remove">
                     SOCIAL MEDIA
-                    <p class="uk-margin-small-top">Twitter: @plateaubpp </p>
-                    <p class="uk-margin-small-top">Facebook: @plateaubpp </p>
-                    <p class="uk-margin-small-top">Instagram: @plateaustatebpp</p>
+                    <p class="uk-margin-small-top">
+                        <a href="https://twitter.com/plateaubpp" style="color: #fff">
+                            Twitter: @plateaubpp
+                        </a>
+                     </p>
+                    <p class="uk-margin-small-top">
+                        <a href="https://web.facebook.com/Plateaubpp/" style="color: #fff">
+                            Facebook: @plateaubpp
+                        </a>
+                    </p>
+                    <p class="uk-margin-small-top">
+                        <a href="" style="color: #fff">
+                            Instagram: @plateaustatebpp
+                        </a>
+                    </p>
                 </div>
                 <div class="uk-margin-remove">
                     ADDRESS:

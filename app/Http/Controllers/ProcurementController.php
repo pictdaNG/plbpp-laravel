@@ -115,7 +115,7 @@
 			
 	  	// $total = sum($sum);
 	  	// dd($total);
-	  	dd($ocds_records);
+	  	//dd($ocds_records);
 			return view('procurement')->with('procurements', $procurements)->with('data', $procurements)->with('ocds_records', $ocds_records);
 	  }
 	    

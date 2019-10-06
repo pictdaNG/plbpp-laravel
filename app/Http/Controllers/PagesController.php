@@ -31,7 +31,7 @@ class PagesController extends Controller {
 
   public function eProcurement() {
     $ocds = $this->ocdsRepo->findAll();
-    dd($ocds);
+    // dd($ocds);
     return view('procurement');
   }
 

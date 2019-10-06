@@ -10,6 +10,7 @@
 	use Maatwebsite\Excel\Facades\Excel;
 	use Session;
 	use Sentinel;
+	use App\Ocds;
 
 	class ProcurementController extends Controller {
 
@@ -110,13 +111,19 @@
 	  }
 
 	  public function index() {
-	  	$procurements = Procurement::all();
+	  	$procurements = Ocds::all();
+	  	$max = \DB::table('ocds')->max('cost');
+	  	$min = \DB::table('ocds')->min('cost');
+	  	$sum = \DB::table('ocds')->sum('cost');
 	  	$ocds_records = $this->ocdsRepo->findAll();
 			
-	  	// $total = sum($sum);
-	  	// dd($total);
-	  	//dd($ocds_records);
-			return view('procurement')->with('procurements', $procurements)->with('data', $procurements)->with('ocds_records', $ocds_records);
+			return view('procurement')
+			->with('procurements', $procurements)
+			->with('data', $procurements)
+			->with('ocds_records', $ocds_records)
+			->with('max', $max)
+			->with('min', $min)
+			->with('sum', $sum);
 	  }
 	    
 	}

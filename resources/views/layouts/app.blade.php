@@ -146,9 +146,9 @@
                     <li>
                       <a href="{{ route('ocds.index') }}">All OCDS</a>
                     </li>
-                    <li>
+                    {{-- <li>
                       <a href="{{ route('ocds.year.create') }}">OCDS Year/Month</a>
-                    </li>
+                    </li> --}}
                     <li>
                       <a href="{{ route('ocds.create') }}">Create OCDS</a>
                     </li>                    

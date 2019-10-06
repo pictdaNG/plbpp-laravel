@@ -4,9 +4,9 @@
 
 	use Illuminate\Http\Request;
 	use App\Repositories\Ocds\OcdsContract;
+	use Sentinel;
 
-	class OcdsController extends Controller
-	{
+	class OcdsController extends Controller {
 
 			protected $repo;
 
@@ -20,8 +20,13 @@
 	     * @return \Illuminate\Http\Response
 	     */
 	    public function index() {
-	    	$ocds = $this->repo->findAll();
-	      return view('ocds.index')->with('ocds_records', $ocds);
+	    	if(!Sentinel::check()){
+          return redirect()->route('auth.login.get');
+        }
+        else{
+		    	$ocds = $this->repo->findAll();
+		      return view('ocds.index')->with('ocds_records', $ocds);
+	    	}
 	    }
 
 	    /**
@@ -29,9 +34,13 @@
 	     *
 	     * @return \Illuminate\Http\Response
 	     */
-	    public function create()
-	    {
-	      return view('ocds.create');
+	    public function create() {
+	    	if(!Sentinel::check()){
+          return redirect()->route('auth.login.get');
+        }
+        else{
+	     	 	return view('ocds.create');
+	    	}
 	    }
 
 	    /**

@@ -22,9 +22,7 @@
 	</style>
 @endsection
 
-
-@section('scripts')
-	
+@section('scripts')	
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
@@ -88,7 +86,7 @@
 											TOTAL SUM OF PROJECTS
 										</p>
 										<p class="el-cardFigure">
-											₦ 45,091,199,582
+											₦ {{ number_format($sum, 2) }}
 										</p>
 									</div>
 								</div>
@@ -105,7 +103,7 @@
 											HIGHEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ 2,283,102,632
+											₦ {{ number_format($max, 2) }}
 										</p>
 									</div>
 								</div>
@@ -122,7 +120,7 @@
 											LOWEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ 210,735
+											₦ {{ number_format($min, 2) }}
 										</p>
 									</div>
 								</div>
@@ -138,8 +136,8 @@
 			<div class="col-md-12 col-lg-3 ">
 				<div class="row">
 					<div class="col">
-						<h3>FILTER PROJECTS</h3>
-						<div class="uk-margin uk-card uk-card-body uk-card-default">
+						{{-- <h3>FILTER PROJECTS</h3> --}}
+						{{-- <div class="uk-margin uk-card uk-card-body uk-card-default">
 							<label class="uk-form-label">
 								<h5>FILTER BY MINISTRIES, DEPARTMENTS &amp; AGENCIES</h5>
 							</label>
@@ -152,7 +150,7 @@
 									@endforeach                                    
 								</select>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</div>

@@ -36,7 +36,7 @@ class CreateOcdsTable extends Migration
             $table->string('contractor_phone')->nullable();
             $table->string('contractor_email')->nullable();
             $table->string('project_photographs')->nullable();
-            $table->string('project_funding')->nullable();
+            $table->integer('project_funding')->default(0);
             $table->string('project_status')->nullable();
             
             $table->string('slug');

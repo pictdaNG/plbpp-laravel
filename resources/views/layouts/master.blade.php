@@ -18,7 +18,7 @@
         <ul>
           <li><a href="https://web.facebook.com/Plateaubpp/"><img src="{{ URL::asset('./assets/img/facebook.png') }}" alt=""></a></li>
           <li><a href="https://twitter.com/plateaubpp"><img src="{{ URL::asset('./assets/img/twitter.png') }}" alt=""></a></li>
-          <li><a href="#"><img src="{{ URL::asset('./assets/img/instagram.png') }}" alt=""></a></li>
+          <li><a href="https://instagram.com/Plateaubpp/"><img src="{{ URL::asset('./assets/img/instagram.png') }}" alt=""></a></li>
         </ul>
         <div class="currentDate">
           <span><img src="{{ URL::asset('./assets/img/calender.png') }}" alt=""></span>
@@ -94,7 +94,7 @@
                         </a>
                     </p>
                     <p class="uk-margin-small-top">
-                        <a href="" style="color: #fff">
+                        <a href="https://instagram.com/Plateaubpp/" style="color: #fff">
                             Instagram: @plateaustatebpp
                         </a>
                     </p>

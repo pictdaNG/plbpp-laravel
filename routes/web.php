@@ -23,7 +23,7 @@ Route::get('/', 'PagesController@home')->name('home');
 Route::get('/about', 'PagesController@about')->name('about');
 Route::get('/mandate', 'PagesController@mandate')->name('mandate');
 // Route::get('/e-procurement', 'PagesController@eProcurement')->name('procurement');
-Route::get('/e-procurement', 'ProcurementController@index')->name('procurement');
+Route::get('/ocds', 'ProcurementController@index')->name('procurement');
 Route::get('/news', 'PagesController@news')->name('news');
 Route::get('/news/awards', 'PagesController@award')->name('awards');
 Route::get('/documents', 'PagesController@documents')->name('documents');

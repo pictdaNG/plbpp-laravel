@@ -25,6 +25,7 @@
         }
         else{
 		    	$ocds = $this->repo->findAll();
+		    	// dd($ocds);
 		      return view('ocds.index')->with('ocds_records', $ocds);
 	    	}
 	    }
@@ -39,7 +40,7 @@
           return redirect()->route('auth.login.get');
         }
         else{
-	     	 	return view('ocds.create');
+	     	 	return view('ocds.new');
 	    	}
 	    }
 

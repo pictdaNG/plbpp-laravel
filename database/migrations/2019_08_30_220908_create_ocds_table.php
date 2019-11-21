@@ -42,8 +42,17 @@ class CreateOcdsTable extends Migration
             $table->string('slug');
             $table->string('project_month')->nullable();
             
+
+            $table->string('st_project')->nullable();
+            $table->string('st_name_of_contractor')->nullable();
+            $table->integer('st_contract_sum')->nullable();
+            $table->string('st_payment_date')->nullable();
+            $table->string('st_project_status')->nullable();
+            $table->string('st_percentage')->nullable();
+            $table->string('st_date_of_award')->nullable();
+            $table->text('st_remarks')->nullable();
+            
             $table->bigInteger('project_year')->nullable();
-            // $table->foreign('project_year')->references('id')->on('ocds_years'); 
 
             $table->timestamps();
         });

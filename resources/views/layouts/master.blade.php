@@ -42,7 +42,7 @@
             <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
             <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
-            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">Contracts</a></li>
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">Contract Awards</a></li>
             <li class="@yield('procurement')">
                 <a href="http://15.188.63.156/login">e-Procurement</a>
             </li>

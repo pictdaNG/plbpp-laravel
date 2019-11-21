@@ -40,7 +40,7 @@
                   <tr>
                     <td>{{ $pro->project }}</td>
                     <td>{{ $pro->st_name_of_contractor }}</td>
-                    <td>₦ {{ $pro->st_contract_sum }}</td>
+                    <td>₦ {{ number_format($pro->st_contract_sum, 2) }}</td>
                     <td>{{ $pro->st_payment_date }}</td>
                     <td>{{ $pro->st_project_status }}</td>
                     <td>{{ $pro->st_percentage }}</td>

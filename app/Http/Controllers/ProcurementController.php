@@ -112,9 +112,9 @@
 
 	  public function index() {
 	  	$procurements = Ocds::all();
-	  	$max = \DB::table('ocds')->max('cost');
-	  	$min = \DB::table('ocds')->min('cost');
-	  	$sum = \DB::table('ocds')->sum('cost');
+	  	$max = \DB::table('ocds')->max('st_contract_sum');
+	  	$min = \DB::table('ocds')->min('st_contract_sum');
+	  	$sum = \DB::table('ocds')->sum('st_contract_sum');
 	  	$ocds_records = $this->ocdsRepo->findAll();
 			
 			return view('procurement')

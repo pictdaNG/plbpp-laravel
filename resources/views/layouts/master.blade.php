@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="{{ URL::asset('/assets/css/app.css') }}" rel="stylesheet">
     @yield('styles')
+    <style type="text/css">
+        @media (min-width: 1200px){
+            .container, .wrapper {
+                max-width: 86%;
+            }
+        }
+    </style>
   </head>
 <body>
 

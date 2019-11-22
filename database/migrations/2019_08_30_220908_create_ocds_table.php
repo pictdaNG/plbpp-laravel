@@ -43,7 +43,7 @@ class CreateOcdsTable extends Migration {
 
 			$table->string('st_project')->nullable();
 			$table->string('st_name_of_contractor')->nullable();
-			$table->integer('st_contract_sum')->nullable();
+			$table->double('st_contract_sum')->nullable();
 			$table->string('st_payment_date')->nullable();
 			$table->string('st_project_status')->nullable();
 			$table->string('st_percentage')->nullable();

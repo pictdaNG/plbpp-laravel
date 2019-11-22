@@ -51,11 +51,41 @@
                     <td>
                       <a class="mr-2 mb-2 btn btn-sm btn-primary btn-rounded" href="{{ route('ocds.edit', $pro->id) }}">Edit</a> <br>
                       <a class="mr-2 mb-2 btn btn-sm btn-danger btn-rounded" href="{{ route('ocds.delete', $pro->id) }}">Delete</a> 
+                      {{-- <button class="mr-2 mb-2 btn btn-sm btn-danger btn-rounded" data-target="#onboardingWideTextModal" data-toggle="modal" type="button">Modal with text only</button> --}}
                     </td>
                   </tr>
                 @endforeach
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="onboarding-modal modal fade animated" id="onboardingWideTextModal" role="dialog" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-lg modal-centered" role="document">
+      <div class="modal-content text-center">
+        <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Skip Intro</span><span class="os-icon os-icon-close"></span></button>
+        <div class="onboarding-side-by-side">
+          <div class="onboarding-media">
+            <img alt="" src="img/bigicon2.png" width="200px">
+          </div>
+          <div class="onboarding-content with-gradient">
+            <h4 class="onboarding-title">
+              Warning: Are you sure you want to Delete this record?
+            </h4>
+            <div class="onboarding-text text-center" >
+              This action can't be reversed!
+
+              <form >
+                <button class="mr-2 mb-2 btn btn-md btn-danger">
+                  Yes... Delete Record!
+                </button>
+              </form>
+            </div>
+
+            
           </div>
         </div>
       </div>

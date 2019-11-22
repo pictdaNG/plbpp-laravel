@@ -72,7 +72,7 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/ocds-create', 'OcdsController@store')->name('ocds.store');
     Route::get('/ocds-edit/{id}', 'OcdsController@edit')->name('ocds.edit');
     Route::put('/ocds-edit/{id}', 'OcdsController@update')->name('ocds.update');
-    Route::get('/ocds-delete/{id}', 'OcdsController@delete')->name('ocds.delete');
+    Route::post('/ocds-delete/{id}', 'OcdsController@delete')->name('ocds.delete');
 
   });
 

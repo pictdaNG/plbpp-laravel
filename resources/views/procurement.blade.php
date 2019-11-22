@@ -136,21 +136,7 @@
 			<div class="col-md-12 col-lg-3 ">
 				<div class="row">
 					<div class="col">
-						{{-- <h3>FILTER PROJECTS</h3> --}}
-						{{-- <div class="uk-margin uk-card uk-card-body uk-card-default">
-							<label class="uk-form-label">
-								<h5>FILTER BY MINISTRIES, DEPARTMENTS &amp; AGENCIES</h5>
-							</label>
-							<div class="uk-form-controls" uk-filter="target: .js-filter">
-								<select class="uk-select">
-									@foreach($procurements as $pro)                                        
-										<option uk-filter-control="[data-tags*='{{ $pro->procuring_entity }}']">
-											{{ $pro->procuring_entity }}
-										</option>
-									@endforeach                                    
-								</select>
-							</div>
-						</div> --}}
+						
 					</div>
 				</div>
 			</div>
@@ -167,7 +153,7 @@
 								<th>Project Title</th>
                   <th>Contractor</th>
                   <th>Contract Sum</th>                            
-                  <th>Certified Payment Date</th>
+                  <th>Certified Payment to Date</th>
                   <th>Status of Project</th>
                   <th>% Completion</th>
                   <th>Date of award</th>

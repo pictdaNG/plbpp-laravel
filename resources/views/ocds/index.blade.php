@@ -16,11 +16,12 @@
                   <th>Project Title</th>
                   <th>Contractor</th>
                   <th>Contract Sum</th>                            
-                  <th>Certified Payment Date</th>
+                  <th>Certified Payment to Date</th>
                   <th>Status of Project</th>
                   <th>% Completion</th>
                   <th>Date of award</th>
                   <th>Remarks</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tfoot>
@@ -28,11 +29,12 @@
                   <th>Project Title</th>
                   <th>Contractor</th>
                   <th>Contract Sum</th>                            
-                  <th>Certified Payment Date</th>
+                  <th>Certified Payment to Date</th>
                   <th>Status of Project</th>
                   <th>% Completion</th>
                   <th>Date of award</th>
                   <th>Remarks</th>
+                  <th>Action</th>
                 </tr>
               </tfoot>
               <tbody>
@@ -46,6 +48,10 @@
                     <td>{{ $pro->st_percentage }}</td>
                     <td>{{ $pro->st_date_of_award }}</td>
                     <td>{{ $pro->st_remarks }}</td>
+                    <td>
+                      <a class="mr-2 mb-2 btn btn-sm btn-primary btn-rounded" href="{{ route('ocds.edit', $pro->id) }}">Edit</a> <br>
+                      <a class="mr-2 mb-2 btn btn-sm btn-danger btn-rounded" href="{{ route('ocds.delete', $pro->id) }}">Delete</a> 
+                    </td>
                   </tr>
                 @endforeach
               </tbody>

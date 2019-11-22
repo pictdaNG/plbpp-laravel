@@ -96,9 +96,15 @@
 	     * @param  int  $id
 	     * @return \Illuminate\Http\Response
 	     */
-	    public function edit($id)
-	    {
-	        //
+	    public function edit($id) {
+	      if(!Sentinel::check()){
+					return redirect()->route('auth.login.get');
+				}
+				else{
+					$ocds = $this->repo->findById($id);
+					// dd($ocds);
+					return view('ocds.edit')->with('ocds', $ocds);
+				}
 	    }
 
 	    /**
@@ -108,9 +114,37 @@
 	     * @param  int  $id
 	     * @return \Illuminate\Http\Response
 	     */
-	    public function update(Request $request, $id)
-	    {
-	        //
+	    public function update(Request $request, $id) {	     
+	      if(!Sentinel::check()){
+					return redirect()->route('auth.login.get');
+				}
+				else{
+					try {
+			      $ocds = $this->repo->update($request, $id);
+			      
+			      $notification = array(
+			        'message' => "OCDS $ocds->project created successfully",
+			        'alert-type' => 'success'
+			      );		
+
+			      if($ocds->id) {
+			        return redirect()->route('ocds.index')->with($notification);
+			      } else {
+			        return back()->withInput()->with('error', 'Could not create OCDS. Try again!');
+			      }
+			    } catch (QueryException $e) {
+			      
+			      $error = array(
+			        'message' => "$request->name already exists!",
+			        'alert-type' => 'error'
+			      );
+
+			      $errorCode = $e->errorInfo[1];
+			      if($errorCode == 1062){
+			        return redirect()->back()->withInput()->with($error);
+			      }
+			    }
+				}
 	    }
 
 	    /**
@@ -121,6 +155,23 @@
 	     */
 	    public function delete($id)
 	    {
-	        //
+	        if(!Sentinel::check()){
+						return redirect()->route('auth.login.get');
+					}
+					else{
+						if ($this->repo->remove($id)) {
+							$notification = array(
+								'message' => "Record deleted successfully",
+								'alert-type' => 'success'
+							);
+							return redirect()->back()->with($notification);
+						 } else {
+							$error = array(
+								'message' => 'Error Deleting Record',
+								'alert-type' => 'error'
+							);
+							return back()->with($error);
+						}    
+					}	
 	    }
 	}

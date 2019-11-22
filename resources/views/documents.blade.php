@@ -20,6 +20,18 @@
             <div class="card-with-image">
                 <div>
                     <h4 class="small-lh">
+                        GAZETTED PROCUREMENT <br><span class="smaller">LAW</span>
+                    </h4>
+                    <a href="./assets/docs/gazetted-procurement-law.pdf" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/law.png" alt="">
+            </div>
+            
+        </div>
+        <div class="link-docs">
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
                         9 ESSENTIAL STEPS IN<br><span class="smaller">PROCUREMENT</span>
                     </h4>
                     <a href="./assets/docs/Nine-Essential-Steps-in-Public-Procurement.pdf" class="p">READ MORE</a>

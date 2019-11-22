@@ -29,8 +29,8 @@
 
           <div class="col-md-4">
             <div class="form-group">
-              <label for="">Certified Payment Date</label>
-              <input class="form-control" placeholder="Enter Certified Payment Date" type="date" name="payment_date">
+              <label for="">Certified Payment To Date</label>
+              <input class="form-control" placeholder="Enter Certified Payment Date" type="text" name="payment_date">
             </div>              
           </div>
 

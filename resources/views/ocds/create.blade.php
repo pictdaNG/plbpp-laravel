@@ -203,6 +203,10 @@
           <label>Select Project Image (optional)</label>
           <input class="form-control" type="file" name="project_photographs">
         </div>
+        <div class="form-group">
+          <label>Entry Date</label>
+          <input class="form-control" type="date" name="st_entry_date">
+        </div>
         
     
         <div class="form-buttons-w">

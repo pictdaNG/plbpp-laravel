@@ -3,6 +3,7 @@
 namespace App\Repositories\Ocds;
 use App\Repositories\Ocds\OcdsContract;
 use App\Ocds;
+use Carbon\Carbon;
 
 class EloquentOcdsRepository implements OcdsContract
 {
@@ -17,6 +18,7 @@ class EloquentOcdsRepository implements OcdsContract
 		$ocds->st_percentage = $request->percentage;
 		$ocds->st_date_of_award = $request->date_of_award;
 		$ocds->st_remarks = $request->remarks;		
+		$ocds->st_entry_date = $request->st_entry_date ?: Carbon::now()->format('d-m-Y');		
 
 		$str = strtolower($request->project);
 		$ocds->slug = preg_replace('/\s+/', '-', $str);
@@ -86,6 +88,7 @@ class EloquentOcdsRepository implements OcdsContract
 		$ocds->st_percentage = $request->percentage;
 		$ocds->st_date_of_award = $request->date_of_award;
 		$ocds->st_remarks = $request->remarks;
+		$ocds->st_entry_date = $request->st_entry_date;
 		
 		$ocds->save();
 		return $ocds;

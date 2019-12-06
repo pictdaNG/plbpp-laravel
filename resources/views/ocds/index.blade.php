@@ -20,6 +20,7 @@
                   <th>Status of Project</th>
                   <th>% Completion</th>
                   <th>Date of award</th>
+                  <th>Date of Entry</th>
                   <th>Remarks</th>
                   <th>Action</th>
                 </tr>
@@ -33,6 +34,7 @@
                   <th>Status of Project</th>
                   <th>% Completion</th>
                   <th>Date of award</th>
+                  <th>Date of Entry</th>
                   <th>Remarks</th>
                   <th>Action</th>
                 </tr>
@@ -47,6 +49,7 @@
                     <td>{{ $pro->st_project_status }}</td>
                     <td>{{ $pro->st_percentage }}</td>
                     <td>{{ $pro->st_date_of_award }}</td>
+                    <td>{{ $pro->st_entry_date }}</td>
                     <td>{{ $pro->st_remarks }}</td>
                     <td>
                       <a class="mr-2 mb-2 btn btn-sm btn-primary btn-rounded" href="{{ route('ocds.edit', $pro->id) }}">Edit Record</a> <br>

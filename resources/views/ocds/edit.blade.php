@@ -50,17 +50,24 @@
         </div>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="">% Completion</label>
               <input class="form-control" placeholder="Enter %" type="text" name="percentage" value="{{ $ocds->st_percentage }}">
             </div>              
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="form-group">
               <label for="">Date of award</label>
               <input class="form-control" placeholder="Enter Project Title" type="date" name="date_of_award" value="{{ $ocds->st_date_of_award }}">
+            </div>              
+          </div>
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label for="">Date of Entry</label>
+              <input class="form-control" placeholder="Enter Project Title" type="date" name="st_entry_date" value="{{ $ocds->st_entry_date }}">
             </div>              
           </div>
         </div>

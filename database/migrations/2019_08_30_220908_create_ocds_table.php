@@ -49,7 +49,7 @@ class CreateOcdsTable extends Migration {
 			$table->string('st_percentage')->nullable();
 			$table->string('st_date_of_award')->nullable();
 			$table->text('st_remarks')->nullable();
-			$table->text('st_entry_date')->useCurrent();
+			$table->string('st_entry_date')->useCurrent();
 			
 			$table->bigInteger('project_year')->nullable();
 

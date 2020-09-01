@@ -99,3 +99,5 @@ Route::group(['prefix' => 'admin'], function() {
 
 
 Route::get('export', 'OcdsController@export')->name('ocds.export');
+Route::get('/import', 'OcdsController@import')->name('demo.import');
+Route::post('/import', 'OcdsController@importStore')->name('demo.import.post');

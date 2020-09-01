@@ -113,6 +113,7 @@
 	  public function index() {
 	  	$procurements = Ocds::all();
 	  	$max = \DB::table('ocds')->max('st_contract_sum');
+	  	// $max = Ocds::orderBy('st_contract_sum', 'desc')->first();
 	  	$min = \DB::table('ocds')->min('st_contract_sum');
 	  	$sum = \DB::table('ocds')->sum('st_contract_sum');
 	  	$ocds_records = $this->ocdsRepo->findAll();

@@ -16,7 +16,7 @@ class EloquentOcdsRepository implements OcdsContract
 		$ocds->st_payment_date = $request->payment_date;
 		$ocds->st_project_status = $request->project_status;
 		$ocds->st_percentage = $request->percentage;
-		$ocds->st_date_of_award = $request->date_of_award;
+		$ocds->st_date_of_award = $request->date_of_award ?: Carbon::now()->format('d-m-Y');
 		$ocds->st_remarks = $request->remarks;		
 		$ocds->st_entry_date = $request->st_entry_date ?: Carbon::now()->format('d-m-Y');		
 
@@ -63,9 +63,8 @@ class EloquentOcdsRepository implements OcdsContract
   }
 
   public function findAll() {
-	$ocds = Ocds::orderBy('st_date_of_award', 'DESC')->get();
-	return $ocds;
-
+		$ocds = Ocds::orderBy('st_date_of_award', 'DESC')->get();
+		return $ocds;
   }
 	
   public function findById($id) {

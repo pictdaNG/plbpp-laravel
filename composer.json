@@ -16,6 +16,7 @@
         "laravel/tinker": "^1.0",
         "maatwebsite/excel": "^3.1",
         "mohammad-fouladgar/eloquent-builder": "^0.6.0",
+        "phpoffice/phpspreadsheet": "^1.10",
         "thomaswelton/laravel-gravatar": "^1.1"
     },
     "require-dev": {

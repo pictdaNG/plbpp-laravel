@@ -25,6 +25,7 @@ Route::get('/mandate', 'PagesController@mandate')->name('mandate');
 // Route::get('/e-procurement', 'PagesController@eProcurement')->name('procurement');
 Route::get('/ocds', 'ProcurementController@index')->name('procurement');
 Route::get('/news', 'PagesController@news')->name('news');
+Route::get('/news/{slug}', 'PagesController@newsDetail')->name('news.details');
 Route::get('/news/awards', 'PagesController@award')->name('awards');
 Route::get('/documents', 'PagesController@documents')->name('documents');
 Route::get('/faq', 'PagesController@faq')->name('faq');
@@ -75,6 +76,26 @@ Route::group(['prefix' => 'admin'], function() {
     Route::post('/ocds-delete/{id}', 'OcdsController@delete')->name('ocds.delete');
 
   });
+  
+  Route::group(['prefix' => 'document'], function() {
+    Route::get('/', 'DocumentController@index')->name('admin.document.index');    
+    Route::get('/upload-a-document', 'DocumentController@create')->name('admin.document.create');
+    Route::post('/upload-a-document', 'DocumentController@store')->name('admin.document.store');
+    Route::get('/edit-document/{slug}', 'DocumentController@edit')->name('admin.document.edit');
+    Route::put('/edit-document/{slug}', 'DocumentController@update')->name('admin.document.update');
+    Route::post('/delete-doument/{id}', 'DocumentController@delete')->name('admin.document.delete');
+  });
+  
+  Route::group(['prefix' => 'news-events'], function() {
+    Route::get('/', 'BlogController@index')->name('admin.news.index');    
+    Route::get('/create', 'BlogController@create')->name('admin.news.create');
+    Route::post('/create', 'BlogController@store')->name('admin.news.store');
+    Route::get('/edit/{slug}', 'BlogController@edit')->name('admin.news.edit');
+    Route::put('/edit/{slug}', 'BlogController@update')->name('admin.news.update');
+    Route::post('/delete/{id}', 'BlogController@delete')->name('admin.news.delete');
+  });
 
 });
 
+
+Route::get('export', 'OcdsController@export')->name('ocds.export');

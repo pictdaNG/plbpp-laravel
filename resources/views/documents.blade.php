@@ -16,7 +16,16 @@
                 <span class="bold-green">DOWNLOADS</span>
             </h3>
         </div>
-        <div class="link-docs">
+        <div class="link-docs" style="webkit-justify-content: flex-start !important;">
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                        ASSENTED COPY OF THE <br><span class="smaller">LAW</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.eu-west-3.amazonaws.com/bpp_accented_law.pdf" target="_blank" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/law.png" alt="">
+            </div>
             <div class="card-with-image">
                 <div>
                     <h4 class="small-lh">
@@ -26,7 +35,6 @@
                 </div>
                 <img src="./assets/img/law.png" alt="">
             </div>
-            
         </div>
         <div class="link-docs">
             <div class="card-with-image">

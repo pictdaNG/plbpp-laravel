@@ -159,7 +159,32 @@
             <li class="sub-header">
               <span>Content Management System</span>
             </li>
-            {{-- <li class=" has-sub-menu">
+            <li class=" has-sub-menu">
+              <a href="">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-package"></div>
+                </div>
+                <span>Document</span></a>
+              <div class="sub-menu-w">
+                <div class="sub-menu-header">
+                  Documents
+                </div>
+                <div class="sub-menu-icon">
+                  <i class="os-icon os-icon-package"></i>
+                </div>
+                <div class="sub-menu-i">
+                  <ul class="sub-menu">
+                    <li>
+                      <a href="{{ route('admin.document.index') }}">All Documents</a>
+                    </li>
+                    <li>
+                      <a href="{{ route('admin.document.create') }}">Upload a Document</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class=" has-sub-menu">
               <a href="">
                 <div class="icon-w">
                   <div class="os-icon os-icon-package"></div>
@@ -175,15 +200,15 @@
                 <div class="sub-menu-i">
                   <ul class="sub-menu">
                     <li>
-                      <a href="#">All News &amp; Events</a>
+                      <a href="{{ route('admin.news.index') }}">All News &amp; Events</a>
                     </li>
                     <li>
-                      <a href="#">Create News &amp; Event</a>
+                      <a href="{{ route('admin.news.create') }}">Create News &amp; Event</a>
                     </li>
                   </ul>
                 </div>
               </div>
-            </li> --}}
+            </li>
             
            
           </ul>

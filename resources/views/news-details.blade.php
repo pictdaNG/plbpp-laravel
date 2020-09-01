@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-  Mandate | Welcome to Plateau State Bureau of Public procurement
+  Welcome to Plateau State Bureau of Public procurement | {{ $post->title }}
 @endsection
 
 @section('mandate')

@@ -10,7 +10,7 @@
 
 		protected $repo;
 
-		public function __construct(RegistrationContract registrationContract) {
+		public function __construct(RegistrationContract $registrationContract) {
 			$this->$repo = registrationContract;
 		}
 

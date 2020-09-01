@@ -5,6 +5,8 @@
 	use Illuminate\Http\Request;
 	use App\Repositories\Ocds\OcdsContract;
 	use Sentinel;
+	use Maatwebsite\Excel\Facades\Excel;
+	use App\Imports\OcdsCSVImport;
 
 	class OcdsController extends Controller {
 
@@ -173,5 +175,16 @@
 							return back()->with($error);
 						}    
 					}	
-	    }
+			}
+			
+			public function import() {
+				return view('ocds.import');
+			}
+
+
+			public function importStore(Request $request) {
+				
+				$ocds = Excel::import(new OcdsCSVImport, request()->file('file'));
+      	return back();
+			}
 	}

@@ -86,7 +86,7 @@
 											TOTAL SUM OF PROJECTS
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($sum, 2) }}
+											₦ {{ number_format((int)$sum, 2) }}
 										</p>
 									</div>
 								</div>
@@ -103,7 +103,7 @@
 											HIGHEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($max, 2) }}
+											₦ {{ number_format((int)$max, 2) }}
 										</p>
 									</div>
 								</div>
@@ -120,7 +120,7 @@
 											LOWEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($min, 2) }}
+											₦ {{ number_format((int)$min, 2) }}
 										</p>
 									</div>
 								</div>
@@ -165,8 +165,8 @@
 								<tr data-tags="{{ $pro->procuring_entity }}">
 									<td>{{ $pro->project }}</td>
                   <td>{{ $pro->st_name_of_contractor }}</td>
-                  <td>₦ {{ number_format($pro->st_contract_sum, 2) }}</td>
-                  <td>₦ {{ number_format($pro->st_payment_date, 2) }}</td>
+                  <td>₦ {{ number_format((int)$pro->st_contract_sum, 2) }}</td>
+                  <td>₦ {{ $pro->st_payment_date }}</td>
                   <td>{{ $pro->st_project_status }}</td>
                   <td>{{ $pro->st_percentage }}</td>
                   <td>{{ $pro->st_date_of_award }}</td>

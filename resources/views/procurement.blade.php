@@ -19,7 +19,7 @@
 			color: #306c49;
 			background-color: #ffffff;
 		}
-		
+
 		.download-btn {
 			color: #ffffff;
 			background-color: #306c49;
@@ -32,7 +32,7 @@
 	</style>
 @endsection
 
-@section('scripts')	
+@section('scripts')
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
@@ -47,7 +47,7 @@
 @section('content')
 	<section class="body container-fluid">
 		<div class="row">
-			<div class="col-md-12 col-lg-3 ">
+			<!-- <div class="col-md-12 col-lg-3 ">
 				<div class="el-banner">
 					<div class="row">
 						<div class="col el-center el-flex align-items-center">
@@ -59,8 +59,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-12 col-lg-9">
+			</div> -->
+			<div class="col-md-12 col-lg-12">
 				<div class="el-cards-holder">
 					<div class="row">
 						<div class="col">
@@ -142,15 +142,15 @@
 		</div>
 	</section>
 	<section class="container-fluid body ">
-		<div class="row el-paddingTop30" uk-filter="target: .js-filter">
+		<div class="row el-paddingTop10" uk-filter="target: .js-filter">
 			<div class="col-md-12 col-lg-3 ">
 				<div class="row">
 					<div class="col">
-						
+
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 col-lg-9 ">
+			<div class="col-md-12 col-lg-12 ">
 				<div class="row">
 					<div class="col">
 						<h3>PROJECTS</h3>
@@ -160,33 +160,31 @@
 					<table id="example" class="uk-table uk-table-hover uk-table-striped js-filter" style="width:100%">
 						<thead class="el-tableHead">
 							<tr>
+              <th>OCID</th>
 								<th>Project Title</th>
-                  <th>Contractor</th>
-                  <th>Contract Sum</th>                            
-                  <th>Certified Payment to Date</th>
-                  <th>Status of Project</th>
-                  <th>% Completion</th>
-                  <th>Date of award</th>
-                  <th>Remarks</th>
+                <th>Description</th>
+                  <th>MDA</th>
+                  <th>Budget Amount</th>
+                  <th>Project Status</th>
+                  <th>Date Awarded</th>
 							</tr>
 						</thead>
 						<tbody class="">
-							@foreach($ocds_records as $pro)
-								<tr data-tags="{{ $pro->procuring_entity }}">
-									<td>{{ $pro->project }}</td>
-                  <td>{{ $pro->st_name_of_contractor }}</td>
-                  <td>₦ {{ number_format((int)$pro->st_contract_sum, 2) }}</td>
-                  <td>₦ {{ $pro->st_payment_date }}</td>
-                  <td>{{ $pro->st_project_status }}</td>
-                  <td>{{ $pro->st_percentage }}</td>
-                  <td>{{ $pro->st_date_of_award }}</td>
-                  <td>{{ $pro->st_remarks }}</td>
+							@foreach($tenders as $tender)
+								<tr>
+                <td>{{ $tender->ocid }}</td>
+									<td>{{ $tender->title }}</td>
+                  <td>{{ $tender->description }}</td>
+                  <td>{{ $tender->mda->title }}</td>
+                  <td>₦ {{ number_format($tender->tender_value, 2) }}</td>
+                  <td>{{ $tender->status }}</td>
+                  <td>{{ $tender->award_date }}</td>
 								</tr>
-							@endforeach                        
+							@endforeach
 						</tbody>
 					</table>
 				</div>
-				
+
 				<div class="row">
 					<div class="col" style="margin-top: 30px; margin-bottom:30px;">
 						<a href="{{route('ocds.export')}}" class="uk-button uk-button-default uk-button-small download-btn" style="margin-right: 30px;">
@@ -194,20 +192,20 @@
 						</a>
 					</div>
 				</div>
-				
-				<div class="row">
+
+				<!-- <div class="row">
 					<div class="col">
 						<h3>CHART SUMMARY</h3>
 					</div>
-				</div>
-				<div class="row">
+				</div> -->
+				<!-- <div class="row">
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart"></canvas>
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart2"></canvas>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>

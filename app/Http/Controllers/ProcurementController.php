@@ -2,25 +2,31 @@
 
 	namespace App\Http\Controllers;
 
-	use Illuminate\Http\Request;
-	use App\Repositories\Procurement\ProcurementContract;
-	use App\Repositories\Ocds\OcdsContract;
-	use App\Procurement;
-	use App\Imports\ProcurementImport;
-	use Maatwebsite\Excel\Facades\Excel;
-	use Session;
+  use Session;
 	use Sentinel;
 	use App\Ocds;
+  use App\Procurement;
+  use Illuminate\Http\Request;
+	use App\Imports\ProcurementImport;
+  use Maatwebsite\Excel\Facades\Excel;
+  use App\Repositories\Ocds\OcdsContract;
+  use App\Repositories\Tender\TenderContract;
+  use App\Repositories\Procurement\ProcurementContract;
+
 
 	class ProcurementController extends Controller {
 
 		protected $repo;
-		protected $ocdsRepo;
+    protected $ocdsRepo;
+    protected $tenderModel;
 
-		public function __construct(ProcurementContract $procurementContract, OcdsContract $ocdsContract) {
-			$this->repo = $procurementContract;
-			$this->ocdsRepo = $ocdsContract;
-		}
+    public function __construct(ProcurementContract $procurementContract,
+          OcdsContract $ocdsContract,
+          TenderContract $tenderContract) {
+          $this->repo = $procurementContract;
+          $this->ocdsRepo = $ocdsContract;
+          $this->tenderModel = $tenderContract;
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -39,7 +45,7 @@
 
 	    if ($request->file ){
 	      $file = $request->file;
-	      // File Details 
+	      // File Details
 	      $filename = $file->getClientOriginalName();
 	      $extension = $file->getClientOriginalExtension();
 	      $tempPath = $file->getRealPath();
@@ -50,7 +56,7 @@
 	      $valid_extension = array("csv");
 
 	      // 2MB in Bytes
-	      $maxFileSize = 2097152; 
+	      $maxFileSize = 2097152;
 
 	      // Check file extension
 	      if(in_array(strtolower($extension),$valid_extension)){
@@ -61,13 +67,13 @@
 	          // Upload file
 	          $file->move($location,$filename);
 	          // Import CSV to Database
-	          $filepath = public_path($location."/".$filename);	          
+	          $filepath = public_path($location."/".$filename);
 	          // Reading file
 	          $file = fopen($filepath,"r");
 	          $importData_arr = array();
 	          $i = 0;
 	          while (($filedata = fgetcsv($file, 1000, ",")) !== FALSE) {
-	            $num = count($filedata );	             
+	            $num = count($filedata );
 	            // Skip first row (Remove below comment if you want to skip the first row)
 	            if($i == 0){
 	              $i++;
@@ -87,11 +93,11 @@
 	            	"serial" => $importData[0],
 	            	"project_title" => $importData[1],
 	            	"contractor" => $importData[2],
-	            	"contract_sum" => $importData[3],		            	
+	            	"contract_sum" => $importData[3],
 	            	"date_of_award" => $importData[4],
 	            	"procuring_entity" => $importData[5],
 	            	"lga" => $importData[6],
-	            );	            
+	            );
 	            Procurement::insert($insertData);
 	          }
 
@@ -116,15 +122,17 @@
 	  	// $max = Ocds::orderBy('st_contract_sum', 'desc')->first();
 	  	$min = \DB::table('ocds')->min('st_contract_sum');
 	  	$sum = \DB::table('ocds')->sum('st_contract_sum');
-	  	$ocds_records = $this->ocdsRepo->findAll();
-			
+      $ocds_records = $this->ocdsRepo->findAll();
+      $tenders = $this->tenderModel->findAll();
+
 			return view('procurement')
 			->with('procurements', $procurements)
 			->with('data', $procurements)
 			->with('ocds_records', $ocds_records)
 			->with('max', $max)
 			->with('min', $min)
-			->with('sum', $sum);
+      ->with('sum', $sum)
+      ->with('tenders', $tenders);
 	  }
-	    
+
 	}

@@ -8,7 +8,7 @@
         <meta name="author" content=""/>
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>PLBPP OCDS</title>
-        <link rel="icon" href="{{ URL::asset('assets/images/favicon.ico')}}" type="image/x-icon"/>
+        <link rel="icon" href="{{ URL::asset('./assets/favicon.ico')}}" type="image/x-icon"/>
         <link href="{{ URL::asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
         <link href="{{ URL::asset('assets/plugins/simplebar/css/simplebar.css')}}" rel="stylesheet"/>
         <link href="{{ URL::asset('assets/css/bootstrap.min.css')}}" rel="stylesheet"/>
@@ -36,7 +36,7 @@
             <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
                 <div class="brand-logo">
                     <a href="">
-                        <img src="{{ URL::asset('assets/images/logo-icon.png')}}" class="logo-icon" alt="logo icon">
+                        <img src="{{ URL::asset('./assets/img/logo.png')}}" class="logo-icon" alt="logo icon">
                         <h5 class="logo-text">PLBPP OCDS</h5>
                     </a>
                 </div>

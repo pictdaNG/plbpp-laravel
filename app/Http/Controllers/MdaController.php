@@ -38,8 +38,6 @@ class MdaController extends Controller  {
 
   public function store(Request $request) {
     $validator = Validator::make($request->all(), [
-      // Specify validation rules here
-      //'email' => 'required|email|unique:users',
       'mda_code' => 'required|unique:mdas',
    ]);
 

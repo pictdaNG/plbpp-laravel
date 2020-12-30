@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.portal.app')
 
 @section('title')
   Documents (Downloads) | Welcome to Plateau State Bureau of Public procurement
@@ -212,5 +212,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

@@ -12,7 +12,7 @@ class EloquentOcdsRepository implements OcdsContract
 		$ocds = new Ocds;
 		$ocds->project = $request->project;
 		$ocds->st_name_of_contractor = $request->name_of_contractor;
-		$ocds->st_contract_sum = $request->contract_sum;
+		$ocds->st_contract_sum = trim(str_replace( ',', '', $request->contract_sum));
 		$ocds->st_payment_date = $request->payment_date;
 		$ocds->st_project_status = $request->project_status;
 		$ocds->st_percentage = $request->percentage;
@@ -63,7 +63,7 @@ class EloquentOcdsRepository implements OcdsContract
   }
 
   public function findAll() {
-	$ocds = Ocds::all();
+	$ocds = Ocds::orderBy('st_date_of_award', 'DESC')->get();
 	return $ocds;
 
   }

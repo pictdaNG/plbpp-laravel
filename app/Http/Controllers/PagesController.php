@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Repositories\Ocds\OcdsContract;
+use App\Repositories\Blog\BlogContract;
+use App\Repositories\Document\DocumentContract;
 
 class PagesController extends Controller {
 
   protected $ocdsRepo;
+  protected $blogRepo;
 
-  public function __construct(OcdsContract $ocdsContract) {
+  public function __construct(OcdsContract $ocdsContract, BlogContract $blogContract, DocumentContract $documentContract) {
     $this->ocdsRepo = $ocdsContract;
+    $this->blogRepo = $blogContract;
+    $this->documentRepo = $documentContract;
   }
 
   public function home() {
@@ -26,7 +31,13 @@ class PagesController extends Controller {
   }
 
   public function news() {
-    return view('news');
+    $posts = $this->blogRepo->findAll();
+    return view('news')->with('posts', $posts);
+  }
+  
+  public function newsDetail($slug) {
+    $post = $this->blogRepo->findBySlug($slug);
+    return view('news-details')->with('post', $post);
   }
 
   public function eProcurement() {
@@ -36,7 +47,8 @@ class PagesController extends Controller {
   }
 
   public function documents() {
-    return view('documents');
+     $documents = $this->documentRepo->getAll();
+    return view('documents')->with('documents', $documents);
   }
 
   public function faq() {

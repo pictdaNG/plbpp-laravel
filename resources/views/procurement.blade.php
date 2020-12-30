@@ -19,6 +19,16 @@
 			color: #306c49;
 			background-color: #ffffff;
 		}
+		
+		.download-btn {
+			color: #ffffff;
+			background-color: #306c49;
+		}
+
+		.download-btn:hover {
+			color: #306c49;
+			background-color: #ffffff;
+		}
 	</style>
 @endsection
 
@@ -27,11 +37,11 @@
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#example').DataTable();
-		});
-	</script>
+// 	<script type="text/javascript">
+// 		$(document).ready(function() {
+// 			$('#example').DataTable();
+// 		});
+// 	</script>
 @endsection
 
 @section('content')
@@ -166,7 +176,7 @@
 									<td>{{ $pro->project }}</td>
                   <td>{{ $pro->st_name_of_contractor }}</td>
                   <td>₦ {{ number_format($pro->st_contract_sum, 2) }}</td>
-                  <td>₦ {{ number_format($pro->st_payment_date, 2) }}</td>
+                  <td>₦ {{ $pro->st_payment_date }}</td>
                   <td>{{ $pro->st_project_status }}</td>
                   <td>{{ $pro->st_percentage }}</td>
                   <td>{{ $pro->st_date_of_award }}</td>
@@ -176,6 +186,15 @@
 						</tbody>
 					</table>
 				</div>
+				
+				<div class="row">
+					<div class="col" style="margin-top: 30px; margin-bottom:30px;">
+						<a href="{{route('ocds.export')}}" class="uk-button uk-button-default uk-button-small download-btn" style="margin-right: 30px;">
+							Download OCDS Document
+						</a>
+					</div>
+				</div>
+				
 				<div class="row">
 					<div class="col">
 						<h3>CHART SUMMARY</h3>

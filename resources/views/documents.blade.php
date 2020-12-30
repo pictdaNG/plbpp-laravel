@@ -16,7 +16,18 @@
                 <span class="bold-green">DOWNLOADS</span>
             </h3>
         </div>
-        <div class="link-docs">
+        <div class="link-docs" style="webkit-justify-content: flex-start !important;">
+            @foreach($documents as $document)
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                        {{ $document->name }}
+                    </h4>
+                    <a href="{{ $document->document_url }}" target="_blank" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/law.png" alt="">
+            </div>
+            @endforeach
             <div class="card-with-image">
                 <div>
                     <h4 class="small-lh">
@@ -26,7 +37,6 @@
                 </div>
                 <img src="./assets/img/law.png" alt="">
             </div>
-            
         </div>
         <div class="link-docs">
             <div class="card-with-image">

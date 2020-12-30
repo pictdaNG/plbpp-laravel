@@ -5,6 +5,9 @@
 	use Illuminate\Http\Request;
 	use App\Repositories\Ocds\OcdsContract;
 	use Sentinel;
+	use App\Exports\StandardOcdsExport;
+	use Maatwebsite\Excel\Facades\Excel;
+	use App\Ocds;
 
 	class OcdsController extends Controller {
 
@@ -145,7 +148,11 @@
 			      }
 			    }
 				}
-	    }
+			}
+			
+			public function export()  {
+        return Excel::download(new StandardOcdsExport, date('Y-m-d H:i:s').'plbpp-ocds.xlsx');
+			}
 
 	    /**
 	     * Remove the specified resource from storage.

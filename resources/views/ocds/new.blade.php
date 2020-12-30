@@ -23,7 +23,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label for=""> Contract Sum</label>
-              <input class="form-control" placeholder="Enter Project Cost" type="text" name="contract_sum">
+              <input class="form-control" placeholder="Enter Project Cost" type="number" name="contract_sum">
             </div>              
           </div>
 

@@ -10,41 +10,40 @@ class AdminController extends Controller
     public function __construct(AdminContract $adminContract) {
         $this->repo = $adminContract;
     }
-    
+
     public function index() {
-        if(!Sentinel::check()){
-            return redirect()->route('auth.login.get');
-        }
-        else{
-            return redirect()->route('ocds.index');
-        }
+      if(!Sentinel::check()){
+        return redirect()->route('auth.login.get');
+      }else{
+        return redirect()->route('admin.tender.index');
+      }
     }
-    
+
     public function create()
     {
         //
     }
-    
+
     public function store(Request $request)
     {
         //
     }
-    
+
     public function show($id)
     {
         //
     }
-    
+
     public function edit($id)
     {
         //
     }
-    
+
     public function update(Request $request, $id)
     {
         //
     }
-    
+
     public function delete($id)
     {
         //

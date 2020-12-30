@@ -52,7 +52,7 @@
                   Administrator
                 </div>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
         <!--------------------
@@ -111,7 +111,7 @@
               </div>
             </div>
           </div>
-          
+
           <h1 class="menu-page-header">
             Page Header
           </h1>
@@ -125,6 +125,14 @@
                   <div class="os-icon os-icon-layout"></div>
                 </div>
                 <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="selected">
+              <a href="{{ route('mda.index') }}">
+                <div class="icon-w">
+                  <div class="os-icon os-icon-layout"></div>
+                </div>
+                <span>MDA</span>
               </a>
             </li>
             <li class=" has-sub-menu">
@@ -151,7 +159,7 @@
                     </li> --}}
                     <li>
                       <a href="{{ route('ocds.create') }}">Create OCDS</a>
-                    </li>                    
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -209,10 +217,10 @@
                 </div>
               </div>
             </li>
-            
-           
+
+
           </ul>
-          
+
         </div>
         <!--------------------
         END - Main Menu
@@ -299,50 +307,20 @@
           <div class="content-panel-toggler">
             <i class="os-icon os-icon-grid-squares-22"></i><span>Sidebar</span>
           </div>
-          {{-- <div class="content-i"> --}}
-            {{-- <div class="content-box" style="padding: 0 !important"> --}}
-              {{-- <div class="row"> --}}
-                {{-- <div class="col-sm-12"> --}}
-                  @yield('content')
-                {{-- </div> --}}
-              {{-- </div> --}}
-              
-            {{-- </div> --}}
-          {{-- </div> --}}
         </div>
       </div>
-      {{-- <div class="display-type"></div> --}}
     </div>
     <script src="{{ URL::asset('./assets/admin/bower_components/jquery/dist/jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/popper.js/dist/umd/popper.min.js') }}"></script>
+
     <script src="{{ URL::asset('./assets/admin/bower_components/moment/moment.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/chart.js/dist/Chart.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/select2/dist/js/select2.full.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/jquery-bar-rating/dist/jquery.barrating.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/ckeditor/ckeditor.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap-validator/dist/validator.min.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/ion.rangeSlider/js/ion.rangeSlider.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/dropzone/dist/dropzone.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/editable-table/mindmup-editabletable.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/fullcalendar/dist/fullcalendar.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/tether/dist/js/tether.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/slick-carousel/slick/slick.min.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/util.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/alert.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/button.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/carousel.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/collapse.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/dropdown.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/modal.js') }}"></script>
     <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/tab.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/tooltip.js') }}"></script>
-    <script src="{{ URL::asset('./assets/admin/bower_components/bootstrap/js/dist/popover.js') }}"></script>
-    <script src=""></script>
-    <script src="{{ URL::asset('./assets/admin/js/demo_customizer.js?version=4.4.0') }}"></script>
     <script src="{{ URL::asset('./assets/admin/js/main.js?version=4.4.0') }}"></script>
     @yield('scripts')
 
@@ -367,6 +345,6 @@
         }
       @endif
     </script>
-    
+
   </body>
 </html>

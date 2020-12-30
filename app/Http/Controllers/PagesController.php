@@ -5,17 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\Ocds\OcdsContract;
 use App\Repositories\Blog\BlogContract;
+<<<<<<< HEAD
 use App\Repositories\Document\DocumentContract;
+=======
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 
 class PagesController extends Controller {
 
   protected $ocdsRepo;
   protected $blogRepo;
 
+<<<<<<< HEAD
   public function __construct(OcdsContract $ocdsContract, BlogContract $blogContract, DocumentContract $documentContract) {
     $this->ocdsRepo = $ocdsContract;
     $this->blogRepo = $blogContract;
     $this->documentRepo = $documentContract;
+=======
+  public function __construct(OcdsContract $ocdsContract, BlogContract $blogContract) {
+    $this->ocdsRepo = $ocdsContract;
+    $this->blogRepo = $blogContract;
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
   }
 
   public function home() {

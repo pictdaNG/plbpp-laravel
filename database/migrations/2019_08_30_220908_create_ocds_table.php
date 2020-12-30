@@ -43,13 +43,13 @@ class CreateOcdsTable extends Migration {
 
 			$table->string('st_project')->nullable();
 			$table->string('st_name_of_contractor')->nullable();
-			$table->double('st_contract_sum')->nullable();
+			$table->double('st_contract_sum')->default(0.00);
 			$table->string('st_payment_date')->nullable();
 			$table->string('st_project_status')->nullable();
 			$table->string('st_percentage')->nullable();
-			$table->string('st_date_of_award')->nullable();
+			$table->date('st_date_of_award')->useCurrent();
 			$table->text('st_remarks')->nullable();
-			$table->string('st_entry_date')->useCurrent();
+			$table->date('st_entry_date')->useCurrent();
 			
 			$table->bigInteger('project_year')->nullable();
 

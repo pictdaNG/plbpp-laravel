@@ -17,6 +17,7 @@
             </h3>
         </div>
         <div class="link-docs" style="webkit-justify-content: flex-start !important;">
+<<<<<<< HEAD
             @foreach($documents as $document)
             <div class="card-with-image">
                 <div>
@@ -28,6 +29,17 @@
                 <img src="./assets/img/law.png" alt="">
             </div>
             @endforeach
+=======
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                        ASSENTED COPY OF THE <br><span class="smaller">LAW</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.eu-west-3.amazonaws.com/bpp_accented_law.pdf" target="_blank" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/law.png" alt="">
+            </div>
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
             <div class="card-with-image">
                 <div>
                     <h4 class="small-lh">
@@ -214,5 +226,5 @@
             </div>
         </div>
     </div>
-    
+
 @endsection

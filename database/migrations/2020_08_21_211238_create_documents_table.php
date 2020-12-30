@@ -16,7 +16,11 @@ class CreateDocumentsTable extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+<<<<<<< HEAD
             $table->string('document_url');
+=======
+            $table->string('doument_url');
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
             $table->boolean('visibility')->default(true);
             $table->string('slug');
             $table->timestamps();

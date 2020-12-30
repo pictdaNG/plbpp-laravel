@@ -19,7 +19,11 @@
 			color: #306c49;
 			background-color: #ffffff;
 		}
+<<<<<<< HEAD
 		
+=======
+
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 		.download-btn {
 			color: #ffffff;
 			background-color: #306c49;
@@ -32,22 +36,30 @@
 	</style>
 @endsection
 
-@section('scripts')	
+@section('scripts')
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
 
+<<<<<<< HEAD
 // 	<script type="text/javascript">
 // 		$(document).ready(function() {
 // 			$('#example').DataTable();
 // 		});
 // 	</script>
+=======
+	<!-- <script type="text/javascript">
+		$(document).ready(function() {
+			$('#example').DataTable();
+		});
+	</script> -->
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 @endsection
 
 @section('content')
 	<section class="body container-fluid">
 		<div class="row">
-			<div class="col-md-12 col-lg-3 ">
+			<!-- <div class="col-md-12 col-lg-3 ">
 				<div class="el-banner">
 					<div class="row">
 						<div class="col el-center el-flex align-items-center">
@@ -59,8 +71,8 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-md-12 col-lg-9">
+			</div> -->
+			<div class="col-md-12 col-lg-12">
 				<div class="el-cards-holder">
 					<div class="row">
 						<div class="col">
@@ -96,7 +108,7 @@
 											TOTAL SUM OF PROJECTS
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($sum, 2) }}
+											₦ {{ number_format((int)$sum, 2) }}
 										</p>
 									</div>
 								</div>
@@ -113,7 +125,7 @@
 											HIGHEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($max, 2) }}
+											₦ {{ number_format((int)$max, 2) }}
 										</p>
 									</div>
 								</div>
@@ -130,7 +142,7 @@
 											LOWEST CONTRACT AMOUNT
 										</p>
 										<p class="el-cardFigure">
-											₦ {{ number_format($min, 2) }}
+											₦ {{ number_format((int)$min, 2) }}
 										</p>
 									</div>
 								</div>
@@ -142,15 +154,15 @@
 		</div>
 	</section>
 	<section class="container-fluid body ">
-		<div class="row el-paddingTop30" uk-filter="target: .js-filter">
+		<div class="row el-paddingTop10" uk-filter="target: .js-filter">
 			<div class="col-md-12 col-lg-3 ">
 				<div class="row">
 					<div class="col">
-						
+
 					</div>
 				</div>
 			</div>
-			<div class="col-md-12 col-lg-9 ">
+			<div class="col-md-12 col-lg-12 ">
 				<div class="row">
 					<div class="col">
 						<h3>PROJECTS</h3>
@@ -160,17 +172,17 @@
 					<table id="example" class="uk-table uk-table-hover uk-table-striped js-filter" style="width:100%">
 						<thead class="el-tableHead">
 							<tr>
+              <th>OCID</th>
 								<th>Project Title</th>
-                  <th>Contractor</th>
-                  <th>Contract Sum</th>                            
-                  <th>Certified Payment to Date</th>
-                  <th>Status of Project</th>
-                  <th>% Completion</th>
-                  <th>Date of award</th>
-                  <th>Remarks</th>
+                <th>Description</th>
+                  <th>MDA</th>
+                  <th>Budget Amount</th>
+                  <th>Project Status</th>
+                  <th>Date Awarded</th>
 							</tr>
 						</thead>
 						<tbody class="">
+<<<<<<< HEAD
 							@foreach($ocds_records as $pro)
 								<tr data-tags="{{ $pro->procuring_entity }}">
 									<td>{{ $pro->project }}</td>
@@ -181,11 +193,23 @@
                   <td>{{ $pro->st_percentage }}</td>
                   <td>{{ $pro->st_date_of_award }}</td>
                   <td>{{ $pro->st_remarks }}</td>
+=======
+							@foreach($tenders as $tender)
+								<tr>
+                <td>{{ $tender->ocid }}</td>
+									<td>{{ $tender->title }}</td>
+                  <td>{{ $tender->description }}</td>
+                  <td>{{ $tender->mda->title }}</td>
+                  <td>₦ {{ number_format($tender->tender_value, 2) }}</td>
+                  <td>{{ $tender->status }}</td>
+                  <td>{{ $tender->award_date }}</td>
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 								</tr>
-							@endforeach                        
+							@endforeach
 						</tbody>
 					</table>
 				</div>
+<<<<<<< HEAD
 				
 				<div class="row">
 					<div class="col" style="margin-top: 30px; margin-bottom:30px;">
@@ -195,19 +219,30 @@
 					</div>
 				</div>
 				
+=======
+
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 				<div class="row">
+					<div class="col" style="margin-top: 30px; margin-bottom:30px;">
+						<a href="{{route('ocds.export')}}" class="uk-button uk-button-default uk-button-small download-btn" style="margin-right: 30px;">
+							Download OCDS Document
+						</a>
+					</div>
+				</div>
+
+				<!-- <div class="row">
 					<div class="col">
 						<h3>CHART SUMMARY</h3>
 					</div>
-				</div>
-				<div class="row">
+				</div> -->
+				<!-- <div class="row">
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart"></canvas>
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart2"></canvas>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>

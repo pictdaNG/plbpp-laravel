@@ -8,6 +8,10 @@
 	use App\Exports\StandardOcdsExport;
 	use Maatwebsite\Excel\Facades\Excel;
 	use App\Ocds;
+<<<<<<< HEAD
+=======
+	use App\Imports\OcdsCSVImport;
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 
 	class OcdsController extends Controller {
 
@@ -27,8 +31,7 @@
           return redirect()->route('auth.login.get');
         }
         else{
-		    	$ocds = $this->repo->findAll();
-		    	// dd($ocds);
+          $ocds = $this->repo->findAll();
 		      return view('ocds.index')->with('ocds_records', $ocds);
 	    	}
 	    }
@@ -54,14 +57,14 @@
 	     * @return \Illuminate\Http\Response
 	     */
 	    public function store(Request $request) {
-	    	
+
 	      try {
 		      $ocds = $this->repo->create($request);
-		      
+
 		      $notification = array(
 		        'message' => "OCDS $ocds->project created successfully",
 		        'alert-type' => 'success'
-		      );		
+		      );
 
 		      if($ocds->id) {
 		        return redirect()->back()->with($notification);
@@ -69,7 +72,7 @@
 		        return back()->withInput()->with('error', 'Could not create OCDS. Try again!');
 		      }
 		    } catch (QueryException $e) {
-		      
+
 		      $error = array(
 		        'message' => "$request->name already exists!",
 		        'alert-type' => 'error'
@@ -105,7 +108,7 @@
 				}
 				else{
 					$ocds = $this->repo->findById($id);
-					// dd($ocds);
+					dd($ocds);
 					return view('ocds.edit')->with('ocds', $ocds);
 				}
 	    }
@@ -117,18 +120,18 @@
 	     * @param  int  $id
 	     * @return \Illuminate\Http\Response
 	     */
-	    public function update(Request $request, $id) {	     
+	    public function update(Request $request, $id) {
 	      if(!Sentinel::check()){
 					return redirect()->route('auth.login.get');
 				}
 				else{
 					try {
 			      $ocds = $this->repo->update($request, $id);
-			      
+
 			      $notification = array(
 			        'message' => "OCDS $ocds->project created successfully",
 			        'alert-type' => 'success'
-			      );		
+			      );
 
 			      if($ocds->id) {
 			        return redirect()->route('ocds.index')->with($notification);
@@ -136,7 +139,7 @@
 			        return back()->withInput()->with('error', 'Could not create OCDS. Try again!');
 			      }
 			    } catch (QueryException $e) {
-			      
+
 			      $error = array(
 			        'message' => "$request->name already exists!",
 			        'alert-type' => 'error'
@@ -149,7 +152,11 @@
 			    }
 				}
 			}
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> b8724452b6a3c8b7a2d46606d0345395c5b028b6
 			public function export()  {
         return Excel::download(new StandardOcdsExport, date('Y-m-d H:i:s').'plbpp-ocds.xlsx');
 			}
@@ -178,7 +185,18 @@
 								'alert-type' => 'error'
 							);
 							return back()->with($error);
-						}    
-					}	
-	    }
+						}
+					}
+			}
+
+			public function import() {
+				return view('ocds.import');
+			}
+
+
+			public function importStore(Request $request) {
+
+				$ocds = Excel::import(new OcdsCSVImport, request()->file('file'));
+      	return back();
+			}
 	}

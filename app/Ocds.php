@@ -32,5 +32,17 @@ class Ocds extends Model
     'project_status',
     'project_month',
     'project_year',
+    'slug',
+    
+    
+    'st_project',
+    'st_name_of_contractor',
+    'st_contract_sum',
+    'st_payment_date',
+    'st_project_status',
+    'st_percentage',
+    'st_date_of_award',
+    'st_remarks',
+    'st_entry_date',
   ];
 }

@@ -6,7 +6,7 @@ use Sentinel;
 use App\Tender;
 use Illuminate\Http\Request;
 use App\Repositories\Tender\TenderContract;
-use App\Repositories\MDA\MDAContract;
+use App\Repositories\Mda\MdaContract;
 use App\Repositories\Contractor\ContractorContract;
 
 
@@ -18,7 +18,7 @@ class TenderController extends Controller{
   protected $contractorModel;
   public function __construct(TenderContract $tenderContract,
           ContractorContract $contractorContract,
-          MDAContract $mdaContract) {
+          MdaContract $mdaContract) {
           $this->repo = $tenderContract;
           $this->mdaModel = $mdaContract;
           $this->contractorModel = $contractorContract;

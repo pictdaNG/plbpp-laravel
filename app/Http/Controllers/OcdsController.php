@@ -29,7 +29,6 @@
         }
         else{
 		    	$ocds = $this->repo->findAll();
-		    	// dd($ocds);
 		      return view('ocds.index')->with('ocds_records', $ocds);
 	    	}
 	    }
@@ -106,7 +105,7 @@
 				}
 				else{
 					$ocds = $this->repo->findById($id);
-					// dd($ocds);
+					dd($ocds);
 					return view('ocds.edit')->with('ocds', $ocds);
 				}
 	    }

@@ -40,10 +40,10 @@
               <label for=""> Status of Project</label>
               <select class="form-control" name="project_status">
                 <option>-- Select status -- </option>
-                <option value="On Going">On Going</option>
-                <option value="Completed">Completed</option>
-                <option value="Expected to be completed">Expected to be completed</option>
-                <option value="Nil">Nil</option>
+                <option value="On Going" {{ $ocds->st_project_status === 'On Going' ? 'selected' : '' }}>On Going</option>
+                <option value="Completed" {{ $ocds->st_project_status === 'Completed' ? 'selected' : '' }}>Completed</option>
+                <option value="Expected to be completed" {{ $ocds->st_project_status === 'Expected to be completed' ? 'selected' : '' }}>Expected to be completed</option>
+                <option value="Nil" {{ $ocds->st_project_status === 'Nil' ? 'selected' : '' }}>Nill</option>
               </select>
             </div>              
           </div>

@@ -51,7 +51,7 @@
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
             <li class="@yield('procurement')"><a href="{{ route('procurement') }}">Contract Awards</a></li>
             <li class="@yield('procurement')">
-                <a href="http://15.188.63.156/login">e-Procurement</a>
+                <a href="http://portal.plateaustatebpp.com/login">e-Procurement</a>
             </li>
             <li class="@yield('news')"><a href="{{ route('news') }}">News</a></li>
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>

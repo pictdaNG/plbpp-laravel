@@ -117,17 +117,15 @@
 	  }
 
 	  public function index() {
-	  	$procurements = Ocds::all();
-	  	$max = \DB::table('ocds')->max('st_contract_sum');
+	  	$max = \DB::table('contracts')->max('value');
 	  	// $max = Ocds::orderBy('st_contract_sum', 'desc')->first();
-	  	$min = \DB::table('ocds')->min('st_contract_sum');
-	  	$sum = \DB::table('ocds')->sum('st_contract_sum');
+	  	$min = \DB::table('contracts')->min('value');
+	  	$sum = \DB::table('contracts')->sum('value');
       $ocds_records = $this->ocdsRepo->findAll();
       $tenders = $this->tenderModel->findAll();
+      //dd($min);
 
 			return view('procurement')
-			->with('procurements', $procurements)
-			->with('data', $procurements)
 			->with('ocds_records', $ocds_records)
 			->with('max', $max)
 			->with('min', $min)

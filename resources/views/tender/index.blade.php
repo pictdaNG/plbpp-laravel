@@ -36,7 +36,7 @@
                     <td>₦ {{ number_format($tender->tender_value, 2) }}</td>
                     <td>
                       <a class="mr-2 mb-2 btn btn-sm btn-primary btn-rounded" href="{{ route('admin.tender.edit', $tender->id) }}">Edit</a>
-                      <button class="mr-2 mb-2 btn btn-sm btn-danger btn-rounded" data-target="#onboardingWideTextModal{{$tender->id}}" data-toggle="modal" type="button">Delete</button>
+                      <button class="mr-2 mb-2 btn btn-sm btn-danger btn-rounded" data-target="#dangermodal{{$tender->id}}" data-toggle="modal" type="button">Delete</button>
                     </td>
                   </tr>
                 @endforeach
@@ -49,17 +49,23 @@
   </div>
 
   @foreach($tenders as $tender)
-  <div class="onboarding-modal modal fade animated" id="onboardingWideTextModal{{$tender->id}}" role="dialog" tabindex="-1" aria-hidden="true" style="display: none;">
-    <div class="modal-dialog modal-lg modal-centered" role="document">
-      <form method="post" action="{{ route('admin.tender.delete', $tender->id) }}">
-        <div class="modal-content text-center">
-          <button aria-label="Close" class="close" data-dismiss="modal" type="button"><span class="close-label">Cancel Action</span><span class="os-icon os-icon-close"></span></button>
-          <div class="onboarding-side-by-side">
-            <div class="onboarding-media">
-              <img alt="" src="../assets/img/alert-warning.svg.png" width="200px">
-            </div>
-            <div class="onboarding-content with-gradient">
-              <h4 class="onboarding-title">
+  <div class="modal fade" id="dangermodal{{$tender->id}}" role="dialog" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+    <div class="modal-content border-danger">
+
+      <div class="modal-header bg-danger">
+        <h5 class="modal-title text-white">Delete Tender</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <form method="post" action="{{ route('admin.tender.delete', $tender->id) }}">
+          <div class="modal-body">
+
+            <!-- <div class="onboarding-media">
+              <img alt="" src="../assets/img/alert-warning.svg.png" width="20px">
+            </div> -->
+              <h5 class="onboarding-title">
                 Warning: Are you sure you want to Delete this record?
               </h4>
               <div class="onboarding-text" >
@@ -67,22 +73,16 @@
               </div>
 
               <div class="onboarding-text" >
-
-                  {{ csrf_field() }}
-                  <input type="hidden" name="id" value="{{$tender->id}}">
-                  <button class="mr-2 mb-2 btn btn-md btn-danger">
-                    Yes... Delete Record!
-                  </button>
-
+                {{ csrf_field() }}
+                <input type="hidden" name="id" value="{{$tender->id}}">
               </div>
             </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            <button type="submit" class="btn btn-danger"><i class="fa fa-check-square-o"></i> Delete</button>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-warning" data-dismiss="modal" type="button"> Cancel</button>
-        </div>
-      </form>
-    </div>
+        </form>
+
   </div>
   @endforeach
 @endsection

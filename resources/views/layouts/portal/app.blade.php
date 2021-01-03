@@ -122,7 +122,7 @@
                       </ul>
                     </li>
                     <li>
-                      <a href="" class="waves-effect">
+                      <a href="{{ route('logout') }}" class="waves-effect">
                       <i class="zmdi ti-power-off"></i>
                       <span>Logout</span>
                       <!-- <small class="badge float-right badge-warning">12</small> -->
@@ -159,7 +159,7 @@
                         </div>
                         </a>
                         </li>
-                        <a href="">
+                        <a href="{{ route('logout') }}">
                             <li class="dropdown-divider"></li>
                             <li class="dropdown-item"><i class="icon-power mr-2"></i>Logout</li>
                         </a>

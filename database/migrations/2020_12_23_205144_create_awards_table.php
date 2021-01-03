@@ -20,9 +20,9 @@ class CreateAwardsTable extends Migration
             $table->string('award_no')->nullable();
             $table->string('signed_date')->nullable();
             $table->bigInteger('contractor_id')->unsigned()->nullable();
-            $table->foreign('contractor_id')->references('id')->on('contractors');
+            $table->foreign('contractor_id')->references('id')->on('contractors')->onDelete('cascade');
             $table->bigInteger('tender_id')->unsigned()->nullable();
-            $table->foreign('tender_id')->references('id')->on('tenders');
+            $table->foreign('tender_id')->references('id')->on('tenders')->onDelete('cascade');
             $table->timestamps();
         });
     }

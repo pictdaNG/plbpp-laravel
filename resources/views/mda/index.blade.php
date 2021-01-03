@@ -55,7 +55,7 @@
     <div class="modal-content border-danger">
 
       <div class="modal-header bg-danger">
-        <h5 class="modal-title text-white">Your modal title here</h5>
+        <h5 class="modal-title text-white">Delete MDA</h5>
         <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -63,10 +63,10 @@
         <form method="post" action="{{ route('admin.mda.delete', $mda->id) }}">
           <div class="modal-body">
 
-            <div class="onboarding-media">
-              <img alt="" src="../assets/img/alert-warning.svg.png" width="100px">
-            </div>
-              <h4 class="onboarding-title">
+            <!-- <div class="onboarding-media">
+              <img alt="" src="../assets/img/alert-warning.svg.png" width="20px">
+            </div> -->
+              <h5 class="onboarding-title">
                 Warning: Are you sure you want to Delete this record?
               </h4>
               <div class="onboarding-text" >
@@ -80,7 +80,7 @@
             </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-            <button type="submit" class="btn btn-danger"><i class="fa fa-check-square-o"></i> Save changes</button>
+            <button type="submit" class="btn btn-danger"><i class="fa fa-check-square-o"></i> Delete</button>
           </div>
         </form>
 

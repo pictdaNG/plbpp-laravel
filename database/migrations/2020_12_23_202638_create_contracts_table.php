@@ -17,9 +17,9 @@ class CreateContractsTable extends Migration
             $table->bigIncrements('id');
             $table->string('award_no')->nullable();
             $table->bigInteger('tender_id')->unsigned()->nullable();
-            $table->foreign('tender_id')->references('id')->on('tenders');
+            $table->foreign('tender_id')->references('id')->on('tenders')->onDelete('cascade');
             $table->bigInteger('contractor_id')->unsigned()->nullable();
-            $table->foreign('contractor_id')->references('id')->on('contractors');
+            $table->foreign('contractor_id')->references('id')->on('contractors')->onDelete('cascade');
             $table->string('status')->nullable();
             $table->string('signed_date')->nullable();
             $table->string('value')->nullable();

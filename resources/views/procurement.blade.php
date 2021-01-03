@@ -79,7 +79,7 @@
 											TOTAL NUMBER OF PROJECTS
 										</p>
 										<p class="el-cardFigure">
-											{{ count($procurements) }}
+											{{ count($tenders) }}
 										</p>
 									</div>
 								</div>

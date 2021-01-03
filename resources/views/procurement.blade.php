@@ -32,17 +32,7 @@
 	</style>
 @endsection
 
-@section('scripts')
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
 
-	<!-- <script type="text/javascript">
-		$(document).ready(function() {
-			$('#example').DataTable();
-		});
-	</script> -->
-@endsection
 
 @section('content')
 	<section class="body container-fluid">
@@ -193,19 +183,19 @@
 					</div>
 				</div>
 
-				<!-- <div class="row">
+				<div class="row">
 					<div class="col">
 						<h3>CHART SUMMARY</h3>
 					</div>
-				</div> -->
-				<!-- <div class="row">
+				</div>
+				<div class="row" style="display:none">
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart"></canvas>
 					</div>
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart2"></canvas>
 					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>
 	</section>

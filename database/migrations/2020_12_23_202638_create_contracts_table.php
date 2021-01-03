@@ -22,7 +22,7 @@ class CreateContractsTable extends Migration
             $table->foreign('contractor_id')->references('id')->on('contractors')->onDelete('cascade');
             $table->string('status')->nullable();
             $table->string('signed_date')->nullable();
-            $table->string('value')->nullable();
+            $table->double('value')->nullable();
             $table->string('currency')->default('NGN');
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();

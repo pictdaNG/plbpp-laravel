@@ -8,6 +8,8 @@
     <title>@yield('title')</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <link href="{{ URL::asset('/assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('./assets/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+
     @yield('styles')
     <style type="text/css">
         @media (min-width: 1200px){
@@ -32,7 +34,7 @@
           <span class="date"></span>
         </div>
       </div>
-    </nav>    
+    </nav>
     <div uk-sticky="show-on-up: true; animation: uk-animation-slide-top;">
       <nav class="uk-navbar-container" uk-navbar style="position: relative; z-index: 980;">
         <div class="main-container">
@@ -142,7 +144,14 @@
 
     </div>
 </div>
-<script src="{{ URL::asset('/assets/js/app.js') }}"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#example').DataTable();
+		});
+	</script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.uikit.min.js"></script>
 @yield('scripts')
 </body>
 </html>

@@ -155,7 +155,7 @@
                 <th>Description</th>
                   <th>MDA</th>
                   <th>Budget Amount</th>
-                  <th>Project Status</th>
+                  <th>Tender Status</th>
                   <th>Date Awarded</th>
 							</tr>
 						</thead>
@@ -183,7 +183,7 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row" style="display:none">
 					<div class="col">
 						<h3>CHART SUMMARY</h3>
 					</div>

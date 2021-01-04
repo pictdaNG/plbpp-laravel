@@ -1,6 +1,4 @@
-
 <?php
-
 namespace App\Repositories\Tender;
 use App\Repositories\Tender\ContractContract;
 use File;

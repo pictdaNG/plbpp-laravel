@@ -184,12 +184,12 @@
           </div>
           <div class="col-md-6">
             <div class="form-group">
-              <label for="">Project Status</label>
+              <label for="">Contract Status</label>
               <select class="form-control" name="contract_status">
                 <option>-- Select Status -- </option>
                  <option value="active">Active</option>
                  <option value="cancelled">Cancelled</option>
-                 <option value="completed">Completed</option>
+                 <option value="pending">Pending</option>
                  <option value="terminated">Terminated</option>
               </select>
             </div>

@@ -145,6 +145,8 @@ class EloquentTenderRepository implements TenderContract{
 
         $tenderObj->description = $tender->description;
         $tenderObj->procurementMethod = $tender->procurement_method;
+        $tenderObj->procurementCategory = $tender->procurement_category;
+
         $tenderObj->value = $tenderValueObj;
         $tenderObj->tenderPeriod = $tenderPeriodObj;
         $tenderObj->awardPeriod = $tenderPeriodObj;
@@ -228,7 +230,7 @@ class EloquentTenderRepository implements TenderContract{
           "version" => "1.1",
           "publisher" => $std,
           "uri" => "https://www.plbpp.plateaustate.gov.ng/ocds",
-          "publishedDate" => $tender->updated_at,
+          "publishedDate" => sizeof($tenders) ? $tenders[0]->updated_at : Carbon::now(),
           'releases' => $nTenders,
         ]
       );

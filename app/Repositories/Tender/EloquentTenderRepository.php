@@ -192,12 +192,8 @@ class EloquentTenderRepository implements TenderContract{
           $contractValueObj->amount = (float)$contract->value;
           $contractValueObj->currency = 'NGN';
 
-          // $startDate = Carbon::createFromFormat('Y-m-d', $contract->start_date);
-          // $endDate = Carbon::createFromFormat('Y-m-d', $contract->end_date);
-          // $signedDate = Carbon::createFromFormat('Y-m-d', $contract->signed_date);
-
-          $contractPeriodObj->startDate = $contract->start_date; //$startDate->toIso8601ZuluString();
-          $contractPeriodObj->endDate = $contract->end_date;  //$endDate->toIso8601ZuluString();
+          $contractPeriodObj->startDate = $contract->start_date;
+          $contractPeriodObj->endDate = $contract->end_date;
 
           $contractObj->id = $contract->award_no;
           $contractObj->awardID = $contract->award_no;

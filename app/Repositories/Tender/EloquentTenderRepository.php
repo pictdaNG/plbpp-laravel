@@ -226,11 +226,7 @@ class EloquentTenderRepository implements TenderContract{
           "version" => "1.1",
           "publisher" => $std,
           "uri" => "https://www.plbpp.plateaustate.gov.ng/ocds",
-<<<<<<< HEAD
           "publishedDate" => sizeof($tenders) ? $tenders[0]->updated_at: Carbon::now(),
-=======
-          "publishedDate" => sizeof($tenders) ? $tenders[0]->updated_at : Carbon::now(),
->>>>>>> 5d9913cbe55fd33c2298fec2b895ce6af8bd12d3
           'releases' => $nTenders,
         ]
       );

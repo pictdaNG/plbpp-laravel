@@ -7,6 +7,7 @@ use App\Mda;
 use App\Award;
 use App\Contract;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Storage;
 
 
 
@@ -230,9 +231,13 @@ class EloquentTenderRepository implements TenderContract{
         ]
       );
 
-    $destinationPath= base_path("resources/downloads/json/ocds.json");
-    File::put($destinationPath, $data);
-    return response()->download($destinationPath);
+    // $destinationPath= base_path("resources/downloads/json/ocds.json");
+    // File::put($destinationPath, $data);
+    Storage::disk('local')->put('ocds.json', $data);
+    return Storage::download('ocds.json');
+    //$url = Storage::url('file.jpg');;
+
+    //return response()->download($destinationPath);
   }
 
   public function findById($id) {

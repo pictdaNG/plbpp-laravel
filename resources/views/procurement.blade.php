@@ -184,11 +184,6 @@
 				</div>
 
 				<div class="row" style="display:none">
-					<div class="col">
-						<h3>CHART SUMMARY</h3>
-					</div>
-				</div>
-				<div class="row" style="display:none">
 					<div class="col-lg-6 col-md-12 col-sm-12">
 						<canvas height="300" id="myChart"></canvas>
 					</div>

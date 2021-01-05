@@ -189,12 +189,7 @@
                 <option>-- Select Status -- </option>
                  <option value="active">Active</option>
                  <option value="cancelled">Cancelled</option>
-<<<<<<< HEAD
-                 <option value="pending">Pending
-		</option>
-=======
                  <option value="pending">Pending</option>
->>>>>>> 5d9913cbe55fd33c2298fec2b895ce6af8bd12d3
                  <option value="terminated">Terminated</option>
               </select>
             </div>

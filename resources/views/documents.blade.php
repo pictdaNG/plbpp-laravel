@@ -29,6 +29,15 @@
             <div class="card-with-image">
                 <div>
                     <h4 class="small-lh">
+                        COVID19 Procurement <br><span class="smaller">COVID-19</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.amazonaws.com/COVID_19_PROCUREMENT_2021.xlsx" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/library.png" alt="">
+            </div>
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
                         GAZETTED PROCUREMENT <br><span class="smaller">LAW</span>
                     </h4>
                     <a href="./assets/docs/gazetted-procurement-law.pdf" class="p">READ MORE</a>

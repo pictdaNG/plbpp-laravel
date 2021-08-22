@@ -8,6 +8,7 @@ use App\Award;
 use App\Contract;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
 
 
 
@@ -205,6 +206,7 @@ class EloquentTenderRepository implements TenderContract{
           $contractObj->period = $contractPeriodObj;
           array_push($contractsArray, $contractObj);
         }
+        Log::info($contractsArray);
         $newTenders['contracts'] = $contractsArray;
 
         $nTenders[] = $newTenders;

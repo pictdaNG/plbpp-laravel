@@ -206,7 +206,7 @@ class EloquentTenderRepository implements TenderContract{
           $contractObj->period = $contractPeriodObj;
           array_push($contractsArray, $contractObj);
         }
-        Log::info($contractsArray);
+        dd($contractsArray);
         $newTenders['contracts'] = $contractsArray;
 
         $nTenders[] = $newTenders;

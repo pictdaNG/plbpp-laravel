@@ -52,11 +52,13 @@
                 <div class="col-sm-10">
                     <select class="form-control" name="state">
                     <option>-- Select State -- </option>
-                    <option value="Benue">Benue</option>
-                    <option value="Plateau">Plateau</option>
                     <option value="Abuja">Abuja</option>
+                    <option value="Benue">Benue</option>
                     <option value="Kano">Kano</option>
                     <option value="Kaduna">Kaduna</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Plateau">Plateau</option>
+
 
                   </select>
                 </div>

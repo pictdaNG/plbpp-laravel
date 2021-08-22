@@ -206,7 +206,6 @@ class EloquentTenderRepository implements TenderContract{
           $contractObj->period = $contractPeriodObj;
           array_push($contractsArray, $contractObj);
         }
-        dd($contractsArray);
         $newTenders['contracts'] = $contractsArray;
 
         $nTenders[] = $newTenders;
@@ -222,6 +221,9 @@ class EloquentTenderRepository implements TenderContract{
         unset($contractPeriodObj);
         unset($contractValueObj);
       }
+
+      dd($contractsArray);
+
 
       $data = json_encode(
         [

@@ -8,7 +8,6 @@ use App\Award;
 use App\Contract;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\Log;
 
 
 
@@ -221,9 +220,6 @@ class EloquentTenderRepository implements TenderContract{
         unset($contractPeriodObj);
         unset($contractValueObj);
       }
-
-      dd($contractsArray);
-
 
       $data = json_encode(
         [

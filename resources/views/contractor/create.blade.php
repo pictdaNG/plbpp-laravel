@@ -56,6 +56,8 @@
                     <option value="Plateau">Plateau</option>
                     <option value="Abuja">Abuja</option>
                     <option value="Kano">Kano</option>
+                    <option value="Kaduna">Kaduna</option>
+
                   </select>
                 </div>
               </div>

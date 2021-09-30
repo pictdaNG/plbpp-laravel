@@ -220,6 +220,35 @@
                 <img src="./assets/img/library.png" alt="">
             </div>
         </div>
+        <div class="link-docs">
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                        Q1 2020 Projects<br><span class="smaller">PROJECTS</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.amazonaws.com/Q1-2020-PROJECTS.xlsx" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/law.png" alt="">
+            </div>
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                         Q2 2020 Projects<br><span class="smaller">PROJECTS</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.amazonaws.com/Q2-2020-PROJECTS.xlsx" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/library.png" alt="">
+            </div>
+            <div class="card-with-image">
+                <div>
+                    <h4 class="small-lh">
+                        Q2 2021 Projects<br><span class="smaller">PROJECTS</span>
+                    </h4>
+                    <a href="https://plug-storage.s3.amazonaws.com/Q2-2021-PROJECTS.xlsx" class="p">READ MORE</a>
+                </div>
+                <img src="./assets/img/library.png" alt="">
+            </div>
+        </div>
     </div>
 
 @endsection

@@ -154,9 +154,9 @@
 								<th>Project Title</th>
 								<th>Description</th>
 								<th>MDA</th>
-								<th>Budget Amount</th>
+								<th>Budget Amount (₦)</th>
 								<th>Contractor</th>
-								<th>Award Amount</th>
+								<th>Award Amount (₦)</th>
 								<th>Tender Status</th>
 								<th>Date Awarded</th>
 							</tr>
@@ -169,9 +169,9 @@
 									<td>{{ $tender->title }}</td>
 									<td>{{ $tender->description }}</td>
 									<td>{{ $tender->mda->title }}</td>
-									<td>₦ {{ number_format($tender->tender_value, 2) }}</td>
+									<td>{{ number_format($tender->tender_value, 2) }}</td>
 									<td>{{ $tender->award[0]->contractor->name }}</td>
-									<td>₦ {{ number_format($tender->award[0]->award_amount, 2)}}</td>
+									<td>{{ number_format($tender->award[0]->award_amount, 2)}}</td>
 									<td>{{ $tender->status }}</td>
 									<td>{{ $tender->award_date }}</td>
 								</tr>

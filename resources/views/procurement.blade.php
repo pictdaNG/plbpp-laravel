@@ -150,25 +150,29 @@
 					<table id="example" class="uk-table uk-table-hover uk-table-striped js-filter" style="width:100%">
 						<thead class="el-tableHead">
 							<tr>
-              <th>OCID</th>
+								<th>OCID</th>
 								<th>Project Title</th>
-                <th>Description</th>
-                  <th>MDA</th>
-                  <th>Budget Amount</th>
-                  <th>Tender Status</th>
-                  <th>Date Awarded</th>
+								<th>Description</th>
+								<th>MDA</th>
+								<th>Budget Amount</th>
+								<th>Contractor</th>
+								<th>Award Amount</th>
+								<th>Tender Status</th>
+								<th>Date Awarded</th>
 							</tr>
 						</thead>
 						<tbody class="">
+							<?php dd($tenders) ?>
 							@foreach($tenders as $tender)
 								<tr>
-                <td>{{ $tender->ocid }}</td>
+                                   <td>{{ $tender->ocid }}</td>
 									<td>{{ $tender->title }}</td>
-                  <td>{{ $tender->description }}</td>
-                  <td>{{ $tender->mda->title }}</td>
-                  <td>₦ {{ number_format($tender->tender_value, 2) }}</td>
-                  <td>{{ $tender->status }}</td>
-                  <td>{{ $tender->award_date }}</td>
+									<td>{{ $tender->description }}</td>
+									<td>{{ $tender->mda->title }}</td>
+									<td>₦ {{ number_format($tender->tender_value, 2) }}</td>
+									<td>{{ $tender->contractor->name }}</td>
+									<td>{{ $tender->status }}</td>
+									<td>{{ $tender->award_date }}</td>
 								</tr>
 							@endforeach
 						</tbody>

@@ -206,7 +206,6 @@ class EloquentTenderRepository implements TenderContract{
           array_push($contractsArray, $contractObj);
         }
         $newTenders['contracts'] = $contractsArray;
-        dd($newTenders);
 
         $nTenders[] = $newTenders;
         unset($buyerObj);

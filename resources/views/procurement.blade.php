@@ -162,7 +162,6 @@
 							</tr>
 						</thead>
 						<tbody class="">
-							<?php dd($tenders) ?>
 							@foreach($tenders as $tender)
 								<tr>
                                    <td>{{ $tender->ocid }}</td>
@@ -170,7 +169,8 @@
 									<td>{{ $tender->description }}</td>
 									<td>{{ $tender->mda->title }}</td>
 									<td>₦ {{ number_format($tender->tender_value, 2) }}</td>
-									<td>{{ $tender->contractor->name }}</td>
+									<td>{{ $tender->award->contractor->name }}</td>
+									<td>₦ {{ number_format($tender->award->award_amount, 2)}}</td>
 									<td>{{ $tender->status }}</td>
 									<td>{{ $tender->award_date }}</td>
 								</tr>

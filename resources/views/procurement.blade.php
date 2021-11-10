@@ -162,6 +162,7 @@
 							</tr>
 						</thead>
 						<tbody class="">
+							<?php dd($tenders) ?>
 							@foreach($tenders as $tender)
 								<tr>
                                    <td>{{ $tender->ocid }}</td>

@@ -51,7 +51,7 @@
             <li class="@yield('home')"><a href="{{ route('home') }}" >Home</a></li>
             <li class="@yield('about')"><a href="{{ route('about') }}">About</a></li>
             <li class="@yield('mandate')"><a href="{{ route('mandate') }}">Mandate</a></li>
-            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">Contract Awards</a></li>
+            <li class="@yield('procurement')"><a href="{{ route('procurement') }}">Open Contracting</a></li>
             <li class="@yield('procurement')">
                 <a href="http://portal.plateaustatebpp.com/login">e-Procurement</a>
             </li>
@@ -59,7 +59,7 @@
             <li class="@yield('documents')"><a href="{{ route('documents') }}">Documents</a></li>
             <li class="@yield('faq')"><a href="{{ route('faq') }}">FAQ</a></li>
             <li class="@yield('organogram')"><a href="{{ route('organogram') }}">Organogram</a></li>
-            <li class="@yield('contact')"><a href="{{ route('open-contract-bids') }}" target="_blank">Open Bids</a></li>
+            <li class="@yield('contact')"><a href="{{ route('open-contract-bids') }}" target="_blank">Advertisement</a></li>
           </ul>
           <a class="uk-navbar-toggle" uk-navbar-toggle-icon  uk-toggle="target: #sidenav" href="#"></a>
         </div>

@@ -4,6 +4,7 @@ namespace App\Repositories\Ocds;
 use App\Repositories\Ocds\OcdsContract;
 use App\Ocds;
 use Carbon\Carbon;
+use App\NewOcds;
 
 class EloquentOcdsRepository implements OcdsContract
 {
@@ -63,7 +64,8 @@ class EloquentOcdsRepository implements OcdsContract
   }
 
   public function findAll() {
-		$ocds = Ocds::orderBy('st_date_of_award', 'DESC')->get();
+		// $ocds = Ocds::orderBy('st_date_of_award', 'DESC')->get();
+		$ocds = NewOcds::orderBy('created_at', 'DESC')->get();
 		return $ocds;
   }
 	

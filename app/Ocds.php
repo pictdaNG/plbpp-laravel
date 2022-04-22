@@ -7,16 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 class Ocds extends Model
 {
   protected $fillable = [
-    'project',
+    'project', // yes
     'cost',
-    'budget_amount',
+    'budget_amount', // yes
     'rationale',
     'location',
-    'procurement_category',
-    'procurement_method_used',
+    'procurement_category', // Yes
+    'procurement_method_used', // Yes
     'date_of_advert',
     'date_of_advert_close',
-    'award_criteria',
+    'award_criteria', // yes
     'final_date_of_completion',
     'contract_boq',
     'date_of_award',
@@ -36,7 +36,7 @@ class Ocds extends Model
     
     
     'st_project',
-    'st_name_of_contractor',
+    'st_name_of_contractor', // yes
     'st_contract_sum',
     'st_payment_date',
     'st_project_status',

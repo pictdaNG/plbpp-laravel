@@ -9,6 +9,7 @@
 	use Maatwebsite\Excel\Facades\Excel;
 	use App\Ocds;
 	use App\Imports\OcdsCSVImport;
+	use Illuminate\Database\QueryException;
 
 	class OcdsController extends Controller {
 

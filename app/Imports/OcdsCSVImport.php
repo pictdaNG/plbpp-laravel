@@ -8,8 +8,11 @@ use Maatwebsite\Excel\Concerns\ToModel;
 use App\Ocds;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
+use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-class OcdsCSVImport implements ToModel
+
+
+class OcdsCSVImport implements ToModel, WithHeadingRow
 {
     /**
     * @param Collection $collection
@@ -26,14 +29,14 @@ class OcdsCSVImport implements ToModel
             'budget_amount'            => $row[3],
             'rationale'            => $row[4],
             'location'            => $row[5],
-            'procurement_category'            => $row[6],
-            'procurement_method_used'            => $row[7],
+            'procurement_category'            => $row[6], //3
+            'procurement_method_used'            => $row[7], //4
             'date_of_advert'            => $row[8],
             'date_of_advert_close'            => $row[9],
             'award_criteria'            => $row[10],
             'final_date_of_completion'            => $row[11],
             'contract_boq'            => $row[12],
-            'date_of_award'            => $row[13],
+            'date_of_award'            => $row[13], //2
             'date_of_signing_of_contract'            => $row[14],
             'commencement_date'            => $row[15],
             'contract_duration'            => $row[16],

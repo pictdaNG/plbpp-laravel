@@ -1,4 +1,7 @@
 <?php
+// use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route; 
+
 
 /*
 |--------------------------------------------------------------------------
@@ -41,9 +44,6 @@ Route::group(['prefix' => 'auth'], function() {
   Route::get('/register', 'RegistrationController@register')->name('get_register');
   Route::post('/register', 'RegistrationController@store')->name('post_register');
 
-  // Account Acitivation Route Resources
-  // Route::get('/activate/{email}/{activationCode}', 'ActivationController@activate')->name('account_activation');
-
   // Recover Password Route Resources
   Route::get('/password-recovery', 'ForgotPasswordController@forgotPassword')->name('get_recovery');
   Route::post('/password-recovery', 'ForgotPasswordController@postForgotPassword')->name('password_recovery');
@@ -71,13 +71,12 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/year-create', 'OcdsYearController@create')->name('ocds.year.create');
     Route::post('/year-create', 'OcdsYearController@store')->name('ocds.year.store');
 
-    Route::get('/', 'OcdsController@index')->name('ocds.index');
+    Route::get('/', 'NewOcdsController@index')->name('ocds.index');
     Route::get('/ocds-create', 'OcdsController@create')->name('ocds.create');
     Route::post('/ocds-create', 'OcdsController@store')->name('ocds.store');
     Route::get('/ocds-edit/{id}', 'OcdsController@edit')->name('ocds.edit');
     Route::put('/ocds-edit/{id}', 'OcdsController@update')->name('ocds.update');
     Route::post('/ocds-delete/{id}', 'OcdsController@delete')->name('ocds.delete');
-
   });
 
   Route::group(['prefix' => 'mda'], function() {
@@ -98,6 +97,9 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('/edit/{id}', 'TenderController@edit')->name('admin.tender.edit');
     Route::post('/edit/{id}', 'TenderController@update')->name('admin.tender.update');
     Route::post('/delete/{id}', 'TenderController@delete')->name('admin.tender.delete');
+
+    Route::get('upload', 'NewOcdsController@upload')->name('admin.tender.upload');
+    Route::post('upload', 'NewOcdsController@bulkUpload')->name('admin.tender.bulk.upload');
 
   });
 

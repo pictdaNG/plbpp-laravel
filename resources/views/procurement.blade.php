@@ -158,22 +158,22 @@
 								<th>Contractor</th>
 								<th>Award Amount (₦)</th>
 								<th>Tender Status</th>
-								<th>Date Awarded</th>
+								
 							</tr>
 						</thead>
 						<tbody class="">
 							<?php //dd($tenders) ?>
 							@foreach($tenders as $tender)
 								<tr>
-                                   <td>{{ $tender->ocid }}</td>
-									<td>{{ $tender->title }}</td>
-									<td>{{ $tender->description }}</td>
-									<td>{{ $tender->mda->title }}</td>
+                                   <td>{{ $tender->project_identification }}</td>
+									<td>{{ $tender->project_title }}</td>
+									<td>{{ $tender->project_description }}</td>
+									<td>{{ $tender->mda_name }}</td>
 									<td>{{ number_format($tender->tender_value, 2) }}</td>
-									<td>{{ $tender->award[0]->contractor->name }}</td>
-									<td>{{ number_format($tender->award[0]->award_amount, 2)}}</td>
-									<td>{{ $tender->status }}</td>
-									<td>{{ $tender->award_date }}</td>
+									<td>{{ $tender->name_of_contractors_suppliers }}</td>
+									<td>{{ $tender->award_amount }}</td>
+									<td>{{ $tender->contract_status }}</td>
+									
 								</tr>
 							@endforeach
 						</tbody>

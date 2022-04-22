@@ -35,10 +35,9 @@
      */
     public function create() {
     	if(!Sentinel::check()){
-				return redirect()->route('auth.login.get');
-			}else{
+			return redirect()->route('auth.login.get');
+		}
       	return view('procurement.create');
-      }
     }
 
     public function uploadFile(Request $request){
@@ -114,23 +113,22 @@
 	      }
 	    }
 	    return redirect()->back();
-	  }
+	}
 
-	  public function index() {
-	  	$max = \DB::table('contracts')->max('value');
-	  	// $max = Ocds::orderBy('st_contract_sum', 'desc')->first();
-	  	$min = \DB::table('contracts')->min('value');
-	  	$sum = \DB::table('contracts')->sum('value');
-      $ocds_records = $this->ocdsRepo->findAll();
-      $tenders = $this->tenderModel->findAll();
-      //dd($min);
+	public function index() {
+	  	$max = \DB::table('new_ocds')->max('award_amount');
+	  	$min = \DB::table('new_ocds')->min('award_amount');
+	  	$sum = \DB::table('new_ocds')->sum('award_amount');
+      	$ocds_records = $this->ocdsRepo->findAll();
+      	$tenders = $this->ocdsRepo->findAll();
+      	// dd($ocds_records);
 
-			return view('procurement')
+		return view('procurement')
 			->with('ocds_records', $ocds_records)
 			->with('max', $max)
 			->with('min', $min)
-      ->with('sum', $sum)
-      ->with('tenders', $tenders);
-	  }
-
+      		->with('sum', $sum)
+      		->with('tenders', $tenders);
 	}
+
+}

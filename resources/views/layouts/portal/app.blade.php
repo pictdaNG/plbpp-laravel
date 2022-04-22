@@ -116,8 +116,15 @@
                         <i class="fa fa-angle-left float-right"></i>
                       </a>
                       <ul class="sidebar-submenu">
-                        <li><a href="{{ route('admin.tender.create') }}"><i class="zmdi zmdi-dot-circle-alt"></i>Create</a></li>
-                        <li><a href="{{ route('admin.tender.index') }}"><i class="zmdi zmdi-dot-circle-alt"></i>View</a></li>
+                        <li>
+                            <a href="{{ route('admin.tender.create') }}"><i class="zmdi zmdi-dot-circle-alt"></i>Create</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.tender.index') }}"><i class="zmdi zmdi-dot-circle-alt"></i>View</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.tender.upload') }}"><i class="zmdi zmdi-dot-circle-alt"></i>Bulk Upload</a>
+                        </li>
 
                       </ul>
                     </li>
